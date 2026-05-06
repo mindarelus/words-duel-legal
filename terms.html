@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="bg">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Условия за ползване · Words Duel</title>
+  <meta name="description" content="Terms of Service for Words Duel / Словесен дуел." />
+  <style>
+
+    :root {
+      --color-bg: #10251f;
+      --color-panel: #f4ead2;
+      --color-panel-soft: #fff6df;
+      --color-ink: #24382f;
+      --color-muted: #6d776f;
+      --color-green: #173f34;
+      --color-gold: #c49345;
+      --color-gold-soft: #e6c678;
+      --color-line: rgba(36, 56, 47, 0.18);
+      --shadow-panel: 0 24px 70px rgba(0, 0, 0, 0.35);
+      --radius-xl: 28px;
+      --radius-md: 18px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--color-ink);
+      font-family:
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+      background:
+        radial-gradient(circle at top, rgba(196, 147, 69, 0.2), transparent 36rem),
+        linear-gradient(145deg, #071611 0%, #10251f 45%, #071611 100%);
+      line-height: 1.65;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .page {
+      width: min(940px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 32px 0;
+    }
+
+    .shell {
+      overflow: hidden;
+      border: 1px solid rgba(230, 198, 120, 0.28);
+      border-radius: var(--radius-xl);
+      background:
+        linear-gradient(180deg, rgba(255, 246, 223, 0.98), rgba(244, 234, 210, 0.98));
+      box-shadow: var(--shadow-panel);
+    }
+
+    .hero {
+      padding: 34px 28px 24px;
+      color: #f8efd7;
+      background:
+        linear-gradient(135deg, rgba(23, 63, 52, 0.98), rgba(13, 37, 30, 0.98)),
+        radial-gradient(circle at top left, rgba(230, 198, 120, 0.22), transparent 20rem);
+      border-bottom: 1px solid rgba(230, 198, 120, 0.25);
+    }
+
+    .eyebrow {
+      margin: 0 0 8px;
+      color: var(--color-gold-soft);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2rem, 5vw, 3.35rem);
+      line-height: 1.08;
+      letter-spacing: 0.015em;
+    }
+
+    .lead {
+      max-width: 66ch;
+      margin: 16px 0 0;
+      color: rgba(248, 239, 215, 0.86);
+      font-size: 1.03rem;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 18px 24px 0;
+    }
+
+    nav a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 40px;
+      padding: 8px 14px;
+      border: 1px solid rgba(36, 56, 47, 0.16);
+      border-radius: 999px;
+      background: rgba(255, 246, 223, 0.65);
+      color: var(--color-green);
+      font-size: 0.92rem;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    nav a[aria-current="page"] {
+      border-color: rgba(196, 147, 69, 0.55);
+      background: linear-gradient(180deg, #f1d489, #c49345);
+      color: #13271f;
+    }
+
+    main {
+      padding: 8px 28px 34px;
+    }
+
+    section {
+      margin-top: 28px;
+      padding-top: 24px;
+      border-top: 1px solid var(--color-line);
+    }
+
+    section:first-child {
+      border-top: 0;
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      color: var(--color-green);
+      font-size: 1.28rem;
+      line-height: 1.25;
+    }
+
+    h3 {
+      margin: 22px 0 8px;
+      color: var(--color-green);
+      font-size: 1.04rem;
+    }
+
+    p,
+    li {
+      color: var(--color-ink);
+    }
+
+    p {
+      margin: 0 0 12px;
+    }
+
+    ul {
+      margin: 10px 0 0;
+      padding-left: 22px;
+    }
+
+    li + li {
+      margin-top: 8px;
+    }
+
+    .note {
+      padding: 16px 18px;
+      border: 1px solid rgba(196, 147, 69, 0.35);
+      border-radius: var(--radius-md);
+      background: rgba(255, 246, 223, 0.78);
+    }
+
+    .muted {
+      color: var(--color-muted);
+    }
+
+    .language-block {
+      display: grid;
+      gap: 20px;
+    }
+
+    .divider-label {
+      margin-top: 30px;
+      color: var(--color-gold);
+      font-size: 0.78rem;
+      font-weight: 900;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    footer {
+      padding: 20px 28px 28px;
+      border-top: 1px solid var(--color-line);
+      color: var(--color-muted);
+      font-size: 0.9rem;
+    }
+
+    .contact-card {
+      display: grid;
+      gap: 10px;
+      padding: 18px;
+      border: 1px solid rgba(196, 147, 69, 0.35);
+      border-radius: var(--radius-md);
+      background: var(--color-panel-soft);
+    }
+
+    .button-link {
+      display: inline-flex;
+      width: fit-content;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 10px 18px;
+      border-radius: 999px;
+      background: linear-gradient(180deg, #f1d489, #c49345);
+      color: #13271f;
+      font-weight: 900;
+      text-decoration: none;
+    }
+
+    @media (max-width: 600px) {
+      .page {
+        width: min(100% - 20px, 940px);
+        padding: 10px 0;
+      }
+
+      .shell {
+        border-radius: 22px;
+      }
+
+      .hero {
+        padding: 28px 20px 22px;
+      }
+
+      nav {
+        padding-inline: 18px;
+      }
+
+      main {
+        padding: 4px 20px 28px;
+      }
+
+      footer {
+        padding-inline: 20px;
+      }
+
+      nav a {
+        flex: 1 1 auto;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="shell">
+      <header class="hero">
+        <p class="eyebrow">Words Duel legal</p>
+        <h1>Условия за ползване</h1>
+        <p class="lead">Условия за ползване / Terms of Service</p>
+      </header>
+
+      <nav aria-label="Legal navigation">
+      <a href="privacy.html">Поверителност / Privacy</a>
+      <a href="terms.html" aria-current="page">Условия / Terms</a>
+      <a href="support.html">Поддръжка / Support</a>
+      </nav>
+
+      <main>
+<section>
+  <h2>Условия за ползване</h2>
+  <p>Като използваш Words Duel / Словесен дуел, приемаш тези условия.</p>
+
+  <h3>Продукт</h3>
+  <p>Words Duel е тактическа игра с думи. Приложението може да се изтегли безплатно и предлага еднократно отключване на Пълната игра.</p>
+
+  <h3>Пълна игра</h3>
+  <p>Пълната игра е еднократен, non-consumable unlock през платформения магазин. Тя не е абонамент, не е пакет с подсказки, не продава XP, постижения, рекорди или competitive advantage.</p>
+  <p>Плащанията, възстановяването на достъп и refund процесите се управляват от съответния магазин, например Google Play.</p>
+
+  <h3>Речници и валидни думи</h3>
+  <p>Играта използва широки речници за проверка на валидни ходове. Някои вулгарни, дискриминационни, омразни или откровено неподходящи думи са изключени, за да остане играта приятна и подходяща за широка аудитория.</p>
+  <p>Приемането на дума от играта означава само, че думата е валидна игрова стойност. Това не е одобрение на значението, употребата или отношението, което думата може да носи.</p>
+
+  <h3>Локални данни</h3>
+  <p>Играта пази настройки, прогрес и запазени игри локално на устройството. Изтриване на приложението, чистене на данни или смяна на устройство може да премахне локалния прогрес, освен ако бъде добавена отделна cloud/sync функция в бъдеща версия.</p>
+
+  <h3>Промени и бъдещи версии</h3>
+  <p>Можем да подобряваме играта, да поправяме грешки и да добавяме съдържание. Основната V1 посока остава честна premium игра без реклами, tracking, абонаменти и casino-style механики.</p>
+</section>
+
+<section>
+  <p class="divider-label">English</p>
+  <h2>Terms of Service</h2>
+  <p>By using Words Duel, you agree to these terms.</p>
+
+  <h3>Product</h3>
+  <p>Words Duel is a tactical word game. The app is free to download and offers a one-time Full Game unlock.</p>
+
+  <h3>Full Game</h3>
+  <p>The Full Game is a one-time, non-consumable unlock through the platform store. It is not a subscription, not a hint pack, and does not sell XP, achievements, records, or competitive advantage.</p>
+  <p>Payments, restoring access, and refund processes are handled by the relevant store, such as Google Play.</p>
+
+  <h3>Dictionaries and valid words</h3>
+  <p>The game uses broad dictionaries to validate moves. Some vulgar, discriminatory, hateful, or explicitly inappropriate words are excluded to keep the game friendly and suitable for a broad audience.</p>
+  <p>A word being accepted by the game means only that it is treated as a valid gameplay entry. It does not represent endorsement of the word’s meaning, usage, or attitude.</p>
+
+  <h3>Local data</h3>
+  <p>The game stores settings, progression, and saved games locally on the device. Deleting the app, clearing data, or changing devices may remove local progress unless a separate cloud/sync feature is added in a future version.</p>
+
+  <h3>Changes and future versions</h3>
+  <p>We may improve the game, fix issues, and add content. The V1 direction remains a fair premium game with no ads, tracking, subscriptions, or casino-style mechanics.</p>
+</section>
+      </main>
+
+      <footer>
+        <p>Last updated: 6 May 2026</p>
+        <p>Words Duel / Словесен дуел · Mindarelus</p>
+      </footer>
+    </div>
+  </div>
+</body>
+</html>
