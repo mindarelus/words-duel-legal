@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="bg">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Условия · Words Duel</title>
+    <meta name="description" content="Условия за ползване за Words Duel / Словесен дуел." />
+    <link rel="alternate" hreflang="bg" href="../bg/terms.html" />
+    <link rel="alternate" hreflang="en" href="../en/terms.html" />
+    <link rel="alternate" hreflang="x-default" href="../en/terms.html" />
+    <style>
+
+    :root {
+      --color-bg: #10251f;
+      --color-panel: #f4ead2;
+      --color-panel-soft: #fff6df;
+      --color-ink: #24382f;
+      --color-muted: #6d776f;
+      --color-green: #173f34;
+      --color-gold: #c49345;
+      --color-gold-soft: #e6c678;
+      --color-line: rgba(36, 56, 47, 0.18);
+      --shadow-panel: 0 24px 70px rgba(0, 0, 0, 0.35);
+      --radius-xl: 28px;
+      --radius-md: 18px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--color-ink);
+      font-family:
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+      background:
+        radial-gradient(circle at top, rgba(196, 147, 69, 0.2), transparent 36rem),
+        linear-gradient(145deg, #071611 0%, #10251f 45%, #071611 100%);
+      line-height: 1.65;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .page {
+      width: min(940px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 32px 0;
+    }
+
+    .shell {
+      overflow: hidden;
+      border: 1px solid rgba(230, 198, 120, 0.28);
+      border-radius: var(--radius-xl);
+      background:
+        linear-gradient(180deg, rgba(255, 246, 223, 0.98), rgba(244, 234, 210, 0.98));
+      box-shadow: var(--shadow-panel);
+    }
+
+    .hero {
+      padding: 26px 28px 24px;
+      color: #f8efd7;
+      background:
+        linear-gradient(135deg, rgba(23, 63, 52, 0.98), rgba(13, 37, 30, 0.98)),
+        radial-gradient(circle at top left, rgba(230, 198, 120, 0.22), transparent 20rem);
+      border-bottom: 1px solid rgba(230, 198, 120, 0.25);
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+
+    .eyebrow {
+      margin: 0;
+      color: var(--color-gold-soft);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .language-switch {
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+      flex: 0 0 auto;
+    }
+
+    .language-switch a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      min-height: 34px;
+      padding: 6px 10px;
+      border: 1px solid rgba(230, 198, 120, 0.28);
+      border-radius: 999px;
+      background: rgba(255, 246, 223, 0.1);
+      color: rgba(248, 239, 215, 0.9);
+      font-size: 0.82rem;
+      font-weight: 900;
+      line-height: 1;
+      text-decoration: none;
+    }
+
+    .language-switch a[aria-current="true"] {
+      border-color: rgba(230, 198, 120, 0.7);
+      background: linear-gradient(180deg, #f1d489, #c49345);
+      color: #13271f;
+    }
+
+    .language-switch img {
+      width: 20px;
+      height: 20px;
+      border-radius: 999px;
+      display: block;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2rem, 5vw, 3.35rem);
+      line-height: 1.08;
+      letter-spacing: 0.015em;
+    }
+
+    .lead {
+      max-width: 66ch;
+      margin: 16px 0 0;
+      color: rgba(248, 239, 215, 0.86);
+      font-size: 1.03rem;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 18px 24px 0;
+    }
+
+    nav a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 40px;
+      padding: 8px 14px;
+      border: 1px solid rgba(36, 56, 47, 0.16);
+      border-radius: 999px;
+      background: rgba(255, 246, 223, 0.65);
+      color: var(--color-green);
+      font-size: 0.92rem;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    nav a[aria-current="page"] {
+      border-color: rgba(196, 147, 69, 0.55);
+      background: linear-gradient(180deg, #f1d489, #c49345);
+      color: #13271f;
+    }
+
+    main {
+      padding: 8px 28px 34px;
+    }
+
+    section {
+      margin-top: 28px;
+      padding-top: 24px;
+      border-top: 1px solid var(--color-line);
+    }
+
+    section:first-child {
+      border-top: 0;
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      color: var(--color-green);
+      font-size: 1.28rem;
+      line-height: 1.25;
+    }
+
+    h3 {
+      margin: 22px 0 8px;
+      color: var(--color-green);
+      font-size: 1.04rem;
+    }
+
+    p,
+    li {
+      color: var(--color-ink);
+    }
+
+    p {
+      margin: 0 0 12px;
+    }
+
+    ul {
+      margin: 10px 0 0;
+      padding-left: 22px;
+    }
+
+    li + li {
+      margin-top: 8px;
+    }
+
+    .note {
+      padding: 16px 18px;
+      border: 1px solid rgba(196, 147, 69, 0.35);
+      border-radius: var(--radius-md);
+      background: rgba(255, 246, 223, 0.78);
+    }
+
+    .muted {
+      color: var(--color-muted);
+    }
+
+    footer {
+      padding: 20px 28px 28px;
+      border-top: 1px solid var(--color-line);
+      color: var(--color-muted);
+      font-size: 0.9rem;
+    }
+
+    .contact-card {
+      display: grid;
+      gap: 10px;
+      padding: 18px;
+      border: 1px solid rgba(196, 147, 69, 0.35);
+      border-radius: var(--radius-md);
+      background: var(--color-panel-soft);
+    }
+
+    .button-link {
+      display: inline-flex;
+      width: fit-content;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 10px 18px;
+      border-radius: 999px;
+      background: linear-gradient(180deg, #f1d489, #c49345);
+      color: #13271f;
+      font-weight: 900;
+      text-decoration: none;
+    }
+
+    @media (max-width: 600px) {
+      .page {
+        width: min(100% - 20px, 940px);
+        padding: 10px 0;
+      }
+
+      .shell {
+        border-radius: 22px;
+      }
+
+      .hero {
+        padding: 22px 20px 22px;
+      }
+
+      .topbar {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      nav {
+        padding-inline: 18px;
+      }
+
+      main {
+        padding: 4px 20px 28px;
+      }
+
+      footer {
+        padding-inline: 20px;
+      }
+
+      nav a {
+        flex: 1 1 auto;
+      }
+    }
+
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <div class="shell">
+        <header class="hero">
+          <div class="topbar">
+            <p class="eyebrow">Words Duel legal</p>
+            <div class="language-switch" aria-label="Language">
+            <a href="../en/terms.html" hreflang="en" lang="en">
+              <img src="../assets/en-flag.svg" alt="" aria-hidden="true" />
+              <span>EN</span>
+            </a>
+            <a href="terms.html" hreflang="bg" lang="bg" aria-current="true">
+              <img src="../assets/bg-flag.svg" alt="" aria-hidden="true" />
+              <span>BG</span>
+            </a>
+          </div>
+          </div>
+          <h1>Условия</h1>
+          <p class="lead">Условия за ползване</p>
+        </header>
+
+        <nav aria-label="Legal navigation">
+        <a href="privacy.html">Поверителност</a>
+        <a href="terms.html" aria-current="page">Условия</a>
+        <a href="support.html">Поддръжка</a>
+        </nav>
+
+        <main>
+          <section>
+           <h2>
+            &Ucy;&scy;&lcy;&ocy;&vcy;&icy;&yacy; &zcy;&acy; &pcy;&ocy;&lcy;&zcy;&vcy;&acy;&ncy;&iecy;
+           </h2>
+           <p>
+            &Kcy;&acy;&tcy;&ocy; &icy;&zcy;&pcy;&ocy;&lcy;&zcy;&vcy;&acy;&shcy; Words Duel / &Scy;&lcy;&ocy;&vcy;&iecy;&scy;&iecy;&ncy; &dcy;&ucy;&iecy;&lcy;, &pcy;&rcy;&icy;&iecy;&mcy;&acy;&shcy; &tcy;&iecy;&zcy;&icy; &ucy;&scy;&lcy;&ocy;&vcy;&icy;&yacy;.
+           </p>
+           <h3>
+            &Pcy;&rcy;&ocy;&dcy;&ucy;&kcy;&tcy;
+           </h3>
+           <p>
+            Words Duel &iecy; &tcy;&acy;&kcy;&tcy;&icy;&chcy;&iecy;&scy;&kcy;&acy; &icy;&gcy;&rcy;&acy; &scy; &dcy;&ucy;&mcy;&icy;. &Pcy;&rcy;&icy;&lcy;&ocy;&zhcy;&iecy;&ncy;&icy;&iecy;&tcy;&ocy; &mcy;&ocy;&zhcy;&iecy; &dcy;&acy; &scy;&iecy; &icy;&zcy;&tcy;&iecy;&gcy;&lcy;&icy; &bcy;&iecy;&zcy;&pcy;&lcy;&acy;&tcy;&ncy;&ocy; &icy; &pcy;&rcy;&iecy;&dcy;&lcy;&acy;&gcy;&acy; &iecy;&dcy;&ncy;&ocy;&kcy;&rcy;&acy;&tcy;&ncy;&ocy; &ocy;&tcy;&kcy;&lcy;&yucy;&chcy;&vcy;&acy;&ncy;&iecy; &ncy;&acy; &Pcy;&hardcy;&lcy;&ncy;&acy;&tcy;&acy; &icy;&gcy;&rcy;&acy;.
+           </p>
+           <h3>
+            &Pcy;&hardcy;&lcy;&ncy;&acy; &icy;&gcy;&rcy;&acy;
+           </h3>
+           <p>
+            &Pcy;&hardcy;&lcy;&ncy;&acy;&tcy;&acy; &icy;&gcy;&rcy;&acy; &iecy; &iecy;&dcy;&ncy;&ocy;&kcy;&rcy;&acy;&tcy;&iecy;&ncy;, non-consumable unlock &pcy;&rcy;&iecy;&zcy; &pcy;&lcy;&acy;&tcy;&fcy;&ocy;&rcy;&mcy;&iecy;&ncy;&icy;&yacy; &mcy;&acy;&gcy;&acy;&zcy;&icy;&ncy;. &Tcy;&yacy; &ncy;&iecy; &iecy; &acy;&bcy;&ocy;&ncy;&acy;&mcy;&iecy;&ncy;&tcy;, &ncy;&iecy; &iecy; &pcy;&acy;&kcy;&iecy;&tcy; &scy; &pcy;&ocy;&dcy;&scy;&kcy;&acy;&zcy;&kcy;&icy;, &ncy;&iecy; &pcy;&rcy;&ocy;&dcy;&acy;&vcy;&acy; XP, &pcy;&ocy;&scy;&tcy;&icy;&zhcy;&iecy;&ncy;&icy;&yacy;, &rcy;&iecy;&kcy;&ocy;&rcy;&dcy;&icy; &icy;&lcy;&icy; competitive advantage.
+           </p>
+           <p>
+            &Pcy;&lcy;&acy;&shchcy;&acy;&ncy;&icy;&yacy;&tcy;&acy;, &vcy;&hardcy;&zcy;&scy;&tcy;&acy;&ncy;&ocy;&vcy;&yacy;&vcy;&acy;&ncy;&iecy;&tcy;&ocy; &ncy;&acy; &dcy;&ocy;&scy;&tcy;&hardcy;&pcy; &icy; refund &pcy;&rcy;&ocy;&tscy;&iecy;&scy;&icy;&tcy;&iecy; &scy;&iecy; &ucy;&pcy;&rcy;&acy;&vcy;&lcy;&yacy;&vcy;&acy;&tcy; &ocy;&tcy; &scy;&hardcy;&ocy;&tcy;&vcy;&iecy;&tcy;&ncy;&icy;&yacy; &mcy;&acy;&gcy;&acy;&zcy;&icy;&ncy;, &ncy;&acy;&pcy;&rcy;&icy;&mcy;&iecy;&rcy; Google Play.
+           </p>
+           <h3>
+            &Rcy;&iecy;&chcy;&ncy;&icy;&tscy;&icy; &icy; &vcy;&acy;&lcy;&icy;&dcy;&ncy;&icy; &dcy;&ucy;&mcy;&icy;
+           </h3>
+           <p>
+            &Icy;&gcy;&rcy;&acy;&tcy;&acy; &icy;&zcy;&pcy;&ocy;&lcy;&zcy;&vcy;&acy; &shcy;&icy;&rcy;&ocy;&kcy;&icy; &rcy;&iecy;&chcy;&ncy;&icy;&tscy;&icy; &zcy;&acy; &pcy;&rcy;&ocy;&vcy;&iecy;&rcy;&kcy;&acy; &ncy;&acy; &vcy;&acy;&lcy;&icy;&dcy;&ncy;&icy; &khcy;&ocy;&dcy;&ocy;&vcy;&iecy;. &Ncy;&yacy;&kcy;&ocy;&icy; &vcy;&ucy;&lcy;&gcy;&acy;&rcy;&ncy;&icy;, &dcy;&icy;&scy;&kcy;&rcy;&icy;&mcy;&icy;&ncy;&acy;&tscy;&icy;&ocy;&ncy;&ncy;&icy;, &ocy;&mcy;&rcy;&acy;&zcy;&ncy;&icy; &icy;&lcy;&icy; &ocy;&tcy;&kcy;&rcy;&ocy;&vcy;&iecy;&ncy;&ocy; &ncy;&iecy;&pcy;&ocy;&dcy;&khcy;&ocy;&dcy;&yacy;&shchcy;&icy; &dcy;&ucy;&mcy;&icy; &scy;&acy; &icy;&zcy;&kcy;&lcy;&yucy;&chcy;&iecy;&ncy;&icy;, &zcy;&acy; &dcy;&acy; &ocy;&scy;&tcy;&acy;&ncy;&iecy; &icy;&gcy;&rcy;&acy;&tcy;&acy; &pcy;&rcy;&icy;&yacy;&tcy;&ncy;&acy; &icy; &pcy;&ocy;&dcy;&khcy;&ocy;&dcy;&yacy;&shchcy;&acy; &zcy;&acy; &shcy;&icy;&rcy;&ocy;&kcy;&acy; &acy;&ucy;&dcy;&icy;&tcy;&ocy;&rcy;&icy;&yacy;.
+           </p>
+           <p>
+            &Pcy;&rcy;&icy;&iecy;&mcy;&acy;&ncy;&iecy;&tcy;&ocy; &ncy;&acy; &dcy;&ucy;&mcy;&acy; &ocy;&tcy; &icy;&gcy;&rcy;&acy;&tcy;&acy; &ocy;&zcy;&ncy;&acy;&chcy;&acy;&vcy;&acy; &scy;&acy;&mcy;&ocy;, &chcy;&iecy; &dcy;&ucy;&mcy;&acy;&tcy;&acy; &iecy; &vcy;&acy;&lcy;&icy;&dcy;&ncy;&acy; &icy;&gcy;&rcy;&ocy;&vcy;&acy; &scy;&tcy;&ocy;&jcy;&ncy;&ocy;&scy;&tcy;. &Tcy;&ocy;&vcy;&acy; &ncy;&iecy; &iecy; &ocy;&dcy;&ocy;&bcy;&rcy;&iecy;&ncy;&icy;&iecy; &ncy;&acy; &zcy;&ncy;&acy;&chcy;&iecy;&ncy;&icy;&iecy;&tcy;&ocy;, &ucy;&pcy;&ocy;&tcy;&rcy;&iecy;&bcy;&acy;&tcy;&acy; &icy;&lcy;&icy; &ocy;&tcy;&ncy;&ocy;&shcy;&iecy;&ncy;&icy;&iecy;&tcy;&ocy;, &kcy;&ocy;&iecy;&tcy;&ocy; &dcy;&ucy;&mcy;&acy;&tcy;&acy; &mcy;&ocy;&zhcy;&iecy; &dcy;&acy; &ncy;&ocy;&scy;&icy;.
+           </p>
+           <h3>
+            &Lcy;&ocy;&kcy;&acy;&lcy;&ncy;&icy; &dcy;&acy;&ncy;&ncy;&icy;
+           </h3>
+           <p>
+            &Icy;&gcy;&rcy;&acy;&tcy;&acy; &pcy;&acy;&zcy;&icy; &ncy;&acy;&scy;&tcy;&rcy;&ocy;&jcy;&kcy;&icy;, &pcy;&rcy;&ocy;&gcy;&rcy;&iecy;&scy; &icy; &zcy;&acy;&pcy;&acy;&zcy;&iecy;&ncy;&icy; &icy;&gcy;&rcy;&icy; &lcy;&ocy;&kcy;&acy;&lcy;&ncy;&ocy; &ncy;&acy; &ucy;&scy;&tcy;&rcy;&ocy;&jcy;&scy;&tcy;&vcy;&ocy;&tcy;&ocy;. &Icy;&zcy;&tcy;&rcy;&icy;&vcy;&acy;&ncy;&iecy; &ncy;&acy; &pcy;&rcy;&icy;&lcy;&ocy;&zhcy;&iecy;&ncy;&icy;&iecy;&tcy;&ocy;, &chcy;&icy;&scy;&tcy;&iecy;&ncy;&iecy; &ncy;&acy; &dcy;&acy;&ncy;&ncy;&icy; &icy;&lcy;&icy; &scy;&mcy;&yacy;&ncy;&acy; &ncy;&acy; &ucy;&scy;&tcy;&rcy;&ocy;&jcy;&scy;&tcy;&vcy;&ocy; &mcy;&ocy;&zhcy;&iecy; &dcy;&acy; &pcy;&rcy;&iecy;&mcy;&acy;&khcy;&ncy;&iecy; &lcy;&ocy;&kcy;&acy;&lcy;&ncy;&icy;&yacy; &pcy;&rcy;&ocy;&gcy;&rcy;&iecy;&scy;, &ocy;&scy;&vcy;&iecy;&ncy; &acy;&kcy;&ocy; &bcy;&hardcy;&dcy;&iecy; &dcy;&ocy;&bcy;&acy;&vcy;&iecy;&ncy;&acy; &ocy;&tcy;&dcy;&iecy;&lcy;&ncy;&acy; cloud/sync &fcy;&ucy;&ncy;&kcy;&tscy;&icy;&yacy; &vcy; &bcy;&hardcy;&dcy;&iecy;&shchcy;&acy; &vcy;&iecy;&rcy;&scy;&icy;&yacy;.
+           </p>
+           <h3>
+            &Pcy;&rcy;&ocy;&mcy;&iecy;&ncy;&icy; &icy; &bcy;&hardcy;&dcy;&iecy;&shchcy;&icy; &vcy;&iecy;&rcy;&scy;&icy;&icy;
+           </h3>
+           <p>
+            &Mcy;&ocy;&zhcy;&iecy;&mcy; &dcy;&acy; &pcy;&ocy;&dcy;&ocy;&bcy;&rcy;&yacy;&vcy;&acy;&mcy;&iecy; &icy;&gcy;&rcy;&acy;&tcy;&acy;, &dcy;&acy; &pcy;&ocy;&pcy;&rcy;&acy;&vcy;&yacy;&mcy;&iecy; &gcy;&rcy;&iecy;&shcy;&kcy;&icy; &icy; &dcy;&acy; &dcy;&ocy;&bcy;&acy;&vcy;&yacy;&mcy;&iecy; &scy;&hardcy;&dcy;&hardcy;&rcy;&zhcy;&acy;&ncy;&icy;&iecy;. &Ocy;&scy;&ncy;&ocy;&vcy;&ncy;&acy;&tcy;&acy; V1 &pcy;&ocy;&scy;&ocy;&kcy;&acy; &ocy;&scy;&tcy;&acy;&vcy;&acy; &chcy;&iecy;&scy;&tcy;&ncy;&acy; premium &icy;&gcy;&rcy;&acy; &bcy;&iecy;&zcy; &rcy;&iecy;&kcy;&lcy;&acy;&mcy;&icy;, tracking, &acy;&bcy;&ocy;&ncy;&acy;&mcy;&iecy;&ncy;&tcy;&icy; &icy; casino-style &mcy;&iecy;&khcy;&acy;&ncy;&icy;&kcy;&icy;.
+           </p>
+          </section>
+        </main>
+
+        <footer>
+          <span>Последна актуализация: 6 май 2026</span>
+          <br />
+          <span>Words Duel / Словесен дуел · Mindarelus</span>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="bg">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Поддръжка · Words Duel</title>
+    <meta name="description" content="Поддръжка за Words Duel / Словесен дуел." />
+    <link rel="alternate" hreflang="bg" href="../bg/support.html" />
+    <link rel="alternate" hreflang="en" href="../en/support.html" />
+    <link rel="alternate" hreflang="x-default" href="../en/support.html" />
+    <style>
+
+    :root {
+      --color-bg: #10251f;
+      --color-panel: #f4ead2;
+      --color-panel-soft: #fff6df;
+      --color-ink: #24382f;
+      --color-muted: #6d776f;
+      --color-green: #173f34;
+      --color-gold: #c49345;
+      --color-gold-soft: #e6c678;
+      --color-line: rgba(36, 56, 47, 0.18);
+      --shadow-panel: 0 24px 70px rgba(0, 0, 0, 0.35);
+      --radius-xl: 28px;
+      --radius-md: 18px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--color-ink);
+      font-family:
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+      background:
+        radial-gradient(circle at top, rgba(196, 147, 69, 0.2), transparent 36rem),
+        linear-gradient(145deg, #071611 0%, #10251f 45%, #071611 100%);
+      line-height: 1.65;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .page {
+      width: min(940px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 32px 0;
+    }
+
+    .shell {
+      overflow: hidden;
+      border: 1px solid rgba(230, 198, 120, 0.28);
+      border-radius: var(--radius-xl);
+      background:
+        linear-gradient(180deg, rgba(255, 246, 223, 0.98), rgba(244, 234, 210, 0.98));
+      box-shadow: var(--shadow-panel);
+    }
+
+    .hero {
+      padding: 26px 28px 24px;
+      color: #f8efd7;
+      background:
+        linear-gradient(135deg, rgba(23, 63, 52, 0.98), rgba(13, 37, 30, 0.98)),
+        radial-gradient(circle at top left, rgba(230, 198, 120, 0.22), transparent 20rem);
+      border-bottom: 1px solid rgba(230, 198, 120, 0.25);
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+
+    .eyebrow {
+      margin: 0;
+      color: var(--color-gold-soft);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .language-switch {
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+      flex: 0 0 auto;
+    }
+
+    .language-switch a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      min-height: 34px;
+      padding: 6px 10px;
+      border: 1px solid rgba(230, 198, 120, 0.28);
+      border-radius: 999px;
+      background: rgba(255, 246, 223, 0.1);
+      color: rgba(248, 239, 215, 0.9);
+      font-size: 0.82rem;
+      font-weight: 900;
+      line-height: 1;
+      text-decoration: none;
+    }
+
+    .language-switch a[aria-current="true"] {
+      border-color: rgba(230, 198, 120, 0.7);
+      background: linear-gradient(180deg, #f1d489, #c49345);
+      color: #13271f;
+    }
+
+    .language-switch img {
+      width: 20px;
+      height: 20px;
+      border-radius: 999px;
+      display: block;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2rem, 5vw, 3.35rem);
+      line-height: 1.08;
+      letter-spacing: 0.015em;
+    }
+
+    .lead {
+      max-width: 66ch;
+      margin: 16px 0 0;
+      color: rgba(248, 239, 215, 0.86);
+      font-size: 1.03rem;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 18px 24px 0;
+    }
+
+    nav a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 40px;
+      padding: 8px 14px;
+      border: 1px solid rgba(36, 56, 47, 0.16);
+      border-radius: 999px;
+      background: rgba(255, 246, 223, 0.65);
+      color: var(--color-green);
+      font-size: 0.92rem;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    nav a[aria-current="page"] {
+      border-color: rgba(196, 147, 69, 0.55);
+      background: linear-gradient(180deg, #f1d489, #c49345);
+      color: #13271f;
+    }
+
+    main {
+      padding: 8px 28px 34px;
+    }
+
+    section {
+      margin-top: 28px;
+      padding-top: 24px;
+      border-top: 1px solid var(--color-line);
+    }
+
+    section:first-child {
+      border-top: 0;
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      color: var(--color-green);
+      font-size: 1.28rem;
+      line-height: 1.25;
+    }
+
+    h3 {
+      margin: 22px 0 8px;
+      color: var(--color-green);
+      font-size: 1.04rem;
+    }
+
+    p,
+    li {
+      color: var(--color-ink);
+    }
+
+    p {
+      margin: 0 0 12px;
+    }
+
+    ul {
+      margin: 10px 0 0;
+      padding-left: 22px;
+    }
+
+    li + li {
+      margin-top: 8px;
+    }
+
+    .note {
+      padding: 16px 18px;
+      border: 1px solid rgba(196, 147, 69, 0.35);
+      border-radius: var(--radius-md);
+      background: rgba(255, 246, 223, 0.78);
+    }
+
+    .muted {
+      color: var(--color-muted);
+    }
+
+    footer {
+      padding: 20px 28px 28px;
+      border-top: 1px solid var(--color-line);
+      color: var(--color-muted);
+      font-size: 0.9rem;
+    }
+
+    .contact-card {
+      display: grid;
+      gap: 10px;
+      padding: 18px;
+      border: 1px solid rgba(196, 147, 69, 0.35);
+      border-radius: var(--radius-md);
+      background: var(--color-panel-soft);
+    }
+
+    .button-link {
+      display: inline-flex;
+      width: fit-content;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 10px 18px;
+      border-radius: 999px;
+      background: linear-gradient(180deg, #f1d489, #c49345);
+      color: #13271f;
+      font-weight: 900;
+      text-decoration: none;
+    }
+
+    @media (max-width: 600px) {
+      .page {
+        width: min(100% - 20px, 940px);
+        padding: 10px 0;
+      }
+
+      .shell {
+        border-radius: 22px;
+      }
+
+      .hero {
+        padding: 22px 20px 22px;
+      }
+
+      .topbar {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      nav {
+        padding-inline: 18px;
+      }
+
+      main {
+        padding: 4px 20px 28px;
+      }
+
+      footer {
+        padding-inline: 20px;
+      }
+
+      nav a {
+        flex: 1 1 auto;
+      }
+    }
+
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <div class="shell">
+        <header class="hero">
+          <div class="topbar">
+            <p class="eyebrow">Words Duel support</p>
+            <div class="language-switch" aria-label="Language">
+            <a href="../en/support.html" hreflang="en" lang="en">
+              <img src="../assets/en-flag.svg" alt="" aria-hidden="true" />
+              <span>EN</span>
+            </a>
+            <a href="support.html" hreflang="bg" lang="bg" aria-current="true">
+              <img src="../assets/bg-flag.svg" alt="" aria-hidden="true" />
+              <span>BG</span>
+            </a>
+          </div>
+          </div>
+          <h1>Поддръжка</h1>
+          <p class="lead">Помощ и връзка с поддръжката</p>
+        </header>
+
+        <nav aria-label="Legal navigation">
+        <a href="privacy.html">Поверителност</a>
+        <a href="terms.html">Условия</a>
+        <a href="support.html" aria-current="page">Поддръжка</a>
+        </nav>
+
+        <main>
+          <section>
+           <h2>
+            &Pcy;&ocy;&dcy;&dcy;&rcy;&hardcy;&zhcy;&kcy;&acy;
+           </h2>
+           <p>
+            &Acy;&kcy;&ocy; &icy;&mcy;&acy;&shcy; &pcy;&rcy;&ocy;&bcy;&lcy;&iecy;&mcy; &scy; &icy;&gcy;&rcy;&acy;&tcy;&acy;, &dcy;&ocy;&scy;&tcy;&hardcy;&pcy;&acy; &dcy;&ocy; &Pcy;&hardcy;&lcy;&ncy;&acy;&tcy;&acy; &icy;&gcy;&rcy;&acy; &icy;&lcy;&icy; &vcy;&hardcy;&zcy;&scy;&tcy;&acy;&ncy;&ocy;&vcy;&yacy;&vcy;&acy;&ncy;&iecy;&tcy;&ocy; &ncy;&acy; &dcy;&ocy;&scy;&tcy;&hardcy;&pcy;, &scy;&vcy;&hardcy;&rcy;&zhcy;&icy; &scy;&iecy; &scy; &ncy;&acy;&scy;.
+           </p>
+           <div class="contact-card">
+            <strong>
+             &Icy;&mcy;&iecy;&jcy;&lcy; &zcy;&acy; &pcy;&ocy;&dcy;&dcy;&rcy;&hardcy;&zhcy;&kcy;&acy;
+            </strong>
+            <a class="button-link" href="mailto:mindarelus@gmail.com">
+             mindarelus@gmail.com
+            </a>
+            <span class="muted">
+             &Acy;&kcy;&ocy; &icy;&zcy;&pcy;&ocy;&lcy;&zcy;&vcy;&acy;&shcy; &dcy;&rcy;&ucy;&gcy; support email &vcy; Google Play Console, &scy;&mcy;&iecy;&ncy;&icy; &tcy;&ocy;&zcy;&icy; &acy;&dcy;&rcy;&iecy;&scy; &icy; &tcy;&ucy;&kcy;.
+            </span>
+           </div>
+           <h3>
+            &Pcy;&rcy;&ocy;&bcy;&lcy;&iecy;&mcy; &scy; &Pcy;&hardcy;&lcy;&ncy;&acy;&tcy;&acy; &icy;&gcy;&rcy;&acy;
+           </h3>
+           <ul>
+            <li>
+             &Pcy;&rcy;&ocy;&vcy;&iecy;&rcy;&icy; &dcy;&acy;&lcy;&icy; &scy;&icy; &vcy;&lcy;&yacy;&zcy;&hardcy;&lcy; &vcy; Google Play &scy;&hardcy;&scy; &scy;&hardcy;&shchcy;&icy;&yacy; &acy;&kcy;&acy;&ucy;&ncy;&tcy;, &scy; &kcy;&ocy;&jcy;&tcy;&ocy; &iecy; &ncy;&acy;&pcy;&rcy;&acy;&vcy;&iecy;&ncy;&ocy; &ocy;&tcy;&kcy;&lcy;&yucy;&chcy;&vcy;&acy;&ncy;&iecy;&tcy;&ocy;.
+            </li>
+            <li>
+             &Ocy;&tcy;&vcy;&ocy;&rcy;&icy; &pcy;&rcy;&icy;&lcy;&ocy;&zhcy;&iecy;&ncy;&icy;&iecy;&tcy;&ocy; &icy; &icy;&zcy;&bcy;&iecy;&rcy;&icy; Settings / &Ncy;&acy;&scy;&tcy;&rcy;&ocy;&jcy;&kcy;&icy; &rarr; &Vcy;&hardcy;&zcy;&scy;&tcy;&acy;&ncy;&ocy;&vcy;&icy; &dcy;&ocy;&scy;&tcy;&hardcy;&pcy;&acy;.
+            </li>
+            <li>
+             &Acy;&kcy;&ocy; Google Play &ncy;&iecy; &ncy;&acy;&mcy;&iecy;&rcy;&icy; &pcy;&rcy;&iecy;&dcy;&icy;&shcy;&ncy;&ocy; &ocy;&tcy;&kcy;&lcy;&yucy;&chcy;&vcy;&acy;&ncy;&iecy;, &icy;&zcy;&pcy;&rcy;&acy;&tcy;&icy; &ncy;&icy; &ocy;&pcy;&icy;&scy;&acy;&ncy;&icy;&iecy; &ncy;&acy; &pcy;&rcy;&ocy;&bcy;&lcy;&iecy;&mcy;&acy;.
+            </li>
+           </ul>
+           <h3>
+            &Kcy;&acy;&kcy;&vcy;&ocy; &dcy;&acy; &vcy;&kcy;&lcy;&yucy;&chcy;&icy;&shcy; &vcy; &scy;&hardcy;&ocy;&bcy;&shchcy;&iecy;&ncy;&icy;&iecy;&tcy;&ocy;
+           </h3>
+           <ul>
+            <li>
+             &Ucy;&scy;&tcy;&rcy;&ocy;&jcy;&scy;&tcy;&vcy;&ocy; &icy; Android &vcy;&iecy;&rcy;&scy;&icy;&yacy;, &acy;&kcy;&ocy; &gcy;&icy; &zcy;&ncy;&acy;&iecy;&shcy;.
+            </li>
+            <li>
+             &Kcy;&rcy;&acy;&tcy;&kcy;&ocy; &ocy;&pcy;&icy;&scy;&acy;&ncy;&icy;&iecy; &ncy;&acy; &pcy;&rcy;&ocy;&bcy;&lcy;&iecy;&mcy;&acy;.
+            </li>
+            <li>
+             Screenshot, &acy;&kcy;&ocy; &pcy;&ocy;&mcy;&acy;&gcy;&acy;.
+            </li>
+            <li>
+             &Dcy;&acy;&lcy;&icy; &pcy;&rcy;&ocy;&bcy;&lcy;&iecy;&mcy;&hardcy;&tcy; &iecy; &pcy;&rcy;&icy; &pcy;&ocy;&kcy;&ucy;&pcy;&kcy;&acy;, &vcy;&hardcy;&zcy;&scy;&tcy;&acy;&ncy;&ocy;&vcy;&yacy;&vcy;&acy;&ncy;&iecy;, &scy;&tcy;&acy;&rcy;&tcy;&icy;&rcy;&acy;&ncy;&iecy;, save/load &icy;&lcy;&icy; gameplay.
+            </li>
+           </ul>
+          </section>
+        </main>
+
+        <footer>
+          <span>Последна актуализация: 6 май 2026</span>
+          <br />
+          <span>Words Duel / Словесен дуел · Mindarelus</span>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Privacy · Words Duel</title>
+    <meta name="description" content="Privacy Policy for Words Duel." />
+    <link rel="alternate" hreflang="en" href="../en/privacy.html" />
+    <link rel="alternate" hreflang="bg" href="../bg/privacy.html" />
+    <link rel="alternate" hreflang="x-default" href="../en/privacy.html" />
+    <style>
+
+    :root {
+      --color-bg: #10251f;
+      --color-panel: #f4ead2;
+      --color-panel-soft: #fff6df;
+      --color-ink: #24382f;
+      --color-muted: #6d776f;
+      --color-green: #173f34;
+      --color-gold: #c49345;
+      --color-gold-soft: #e6c678;
+      --color-line: rgba(36, 56, 47, 0.18);
+      --shadow-panel: 0 24px 70px rgba(0, 0, 0, 0.35);
+      --radius-xl: 28px;
+      --radius-md: 18px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--color-ink);
+      font-family:
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+      background:
+        radial-gradient(circle at top, rgba(196, 147, 69, 0.2), transparent 36rem),
+        linear-gradient(145deg, #071611 0%, #10251f 45%, #071611 100%);
+      line-height: 1.65;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .page {
+      width: min(940px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 32px 0;
+    }
+
+    .shell {
+      overflow: hidden;
+      border: 1px solid rgba(230, 198, 120, 0.28);
+      border-radius: var(--radius-xl);
+      background:
+        linear-gradient(180deg, rgba(255, 246, 223, 0.98), rgba(244, 234, 210, 0.98));
+      box-shadow: var(--shadow-panel);
+    }
+
+    .hero {
+      padding: 26px 28px 24px;
+      color: #f8efd7;
+      background:
+        linear-gradient(135deg, rgba(23, 63, 52, 0.98), rgba(13, 37, 30, 0.98)),
+        radial-gradient(circle at top left, rgba(230, 198, 120, 0.22), transparent 20rem);
+      border-bottom: 1px solid rgba(230, 198, 120, 0.25);
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+
+    .eyebrow {
+      margin: 0;
+      color: var(--color-gold-soft);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .language-switch {
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+      flex: 0 0 auto;
+    }
+
+    .language-switch a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      min-height: 34px;
+      padding: 6px 10px;
+      border: 1px solid rgba(230, 198, 120, 0.28);
+      border-radius: 999px;
+      background: rgba(255, 246, 223, 0.1);
+      color: rgba(248, 239, 215, 0.9);
+      font-size: 0.82rem;
+      font-weight: 900;
+      line-height: 1;
+      text-decoration: none;
+    }
+
+    .language-switch a[aria-current="true"] {
+      border-color: rgba(230, 198, 120, 0.7);
+      background: linear-gradient(180deg, #f1d489, #c49345);
+      color: #13271f;
+    }
+
+    .language-switch img {
+      width: 20px;
+      height: 20px;
+      border-radius: 999px;
+      display: block;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2rem, 5vw, 3.35rem);
+      line-height: 1.08;
+      letter-spacing: 0.015em;
+    }
+
+    .lead {
+      max-width: 66ch;
+      margin: 16px 0 0;
+      color: rgba(248, 239, 215, 0.86);
+      font-size: 1.03rem;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 18px 24px 0;
+    }
+
+    nav a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 40px;
+      padding: 8px 14px;
+      border: 1px solid rgba(36, 56, 47, 0.16);
+      border-radius: 999px;
+      background: rgba(255, 246, 223, 0.65);
+      color: var(--color-green);
+      font-size: 0.92rem;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    nav a[aria-current="page"] {
+      border-color: rgba(196, 147, 69, 0.55);
+      background: linear-gradient(180deg, #f1d489, #c49345);
+      color: #13271f;
+    }
+
+    main {
+      padding: 8px 28px 34px;
+    }
+
+    section {
+      margin-top: 28px;
+      padding-top: 24px;
+      border-top: 1px solid var(--color-line);
+    }
+
+    section:first-child {
+      border-top: 0;
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      color: var(--color-green);
+      font-size: 1.28rem;
+      line-height: 1.25;
+    }
+
+    h3 {
+      margin: 22px 0 8px;
+      color: var(--color-green);
+      font-size: 1.04rem;
+    }
+
+    p,
+    li {
+      color: var(--color-ink);
+    }
+
+    p {
+      margin: 0 0 12px;
+    }
+
+    ul {
+      margin: 10px 0 0;
+      padding-left: 22px;
+    }
+
+    li + li {
+      margin-top: 8px;
+    }
+
+    .note {
+      padding: 16px 18px;
+      border: 1px solid rgba(196, 147, 69, 0.35);
+      border-radius: var(--radius-md);
+      background: rgba(255, 246, 223, 0.78);
+    }
+
+    .muted {
+      color: var(--color-muted);
+    }
+
+    footer {
+      padding: 20px 28px 28px;
+      border-top: 1px solid var(--color-line);
+      color: var(--color-muted);
+      font-size: 0.9rem;
+    }
+
+    .contact-card {
+      display: grid;
+      gap: 10px;
+      padding: 18px;
+      border: 1px solid rgba(196, 147, 69, 0.35);
+      border-radius: var(--radius-md);
+      background: var(--color-panel-soft);
+    }
+
+    .button-link {
+      display: inline-flex;
+      width: fit-content;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 10px 18px;
+      border-radius: 999px;
+      background: linear-gradient(180deg, #f1d489, #c49345);
+      color: #13271f;
+      font-weight: 900;
+      text-decoration: none;
+    }
+
+    @media (max-width: 600px) {
+      .page {
+        width: min(100% - 20px, 940px);
+        padding: 10px 0;
+      }
+
+      .shell {
+        border-radius: 22px;
+      }
+
+      .hero {
+        padding: 22px 20px 22px;
+      }
+
+      .topbar {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      nav {
+        padding-inline: 18px;
+      }
+
+      main {
+        padding: 4px 20px 28px;
+      }
+
+      footer {
+        padding-inline: 20px;
+      }
+
+      nav a {
+        flex: 1 1 auto;
+      }
+    }
+
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <div class="shell">
+        <header class="hero">
+          <div class="topbar">
+            <p class="eyebrow">Words Duel legal</p>
+            <div class="language-switch" aria-label="Language">
+            <a href="privacy.html" hreflang="en" lang="en" aria-current="true">
+              <img src="../assets/en-flag.svg" alt="" aria-hidden="true" />
+              <span>EN</span>
+            </a>
+            <a href="../bg/privacy.html" hreflang="bg" lang="bg">
+              <img src="../assets/bg-flag.svg" alt="" aria-hidden="true" />
+              <span>BG</span>
+            </a>
+          </div>
+          </div>
+          <h1>Privacy</h1>
+          <p class="lead">Privacy Policy</p>
+        </header>
+
+        <nav aria-label="Legal navigation">
+        <a href="privacy.html" aria-current="page">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="support.html">Support</a>
+        </nav>
+
+        <main>
+          <section>
+           <h2>
+            Privacy Policy
+           </h2>
+           <p>
+            This policy explains how Words Duel handles information in the Android version of the app.
+           </p>
+           <p class="note">
+            In short: the app has no ads, no tracking, no accounts, and does not upload your gameplay data to our server.
+           </p>
+           <h3>
+            Data stored by the app
+           </h3>
+           <p>
+            The app may store settings, active/saved games, finished match archive data, progression, achievements, records, and a local cache for confirmed Full Game access on your device.
+           </p>
+           <p>
+            This data is used only to make the game work and remains on your device unless you choose to share it outside the app.
+           </p>
+           <h3>
+            Purchases
+           </h3>
+           <p>
+            The Full Game is unlocked through a one-time purchase via the platform store, such as Google Play. Payment details, payment methods, store account data, restoring access, and refunds are handled by the platform store, not by us.
+           </p>
+           <h3>
+            Ads, tracking, and analytics
+           </h3>
+           <p>
+            The V1 app does not use advertising SDKs, analytics SDKs, or hidden tracking mechanisms.
+           </p>
+           <h3>
+            Support
+           </h3>
+           <p>
+            If you contact support, we will receive the information you choose to send, such as your email address, message, screenshot, or problem description. This information is used only to reply and help resolve the issue.
+           </p>
+          </section>
+        </main>
+
+        <footer>
+          <span>Last updated: 6 May 2026</span>
+          <br />
+          <span>Words Duel / Словесен дуел · Mindarelus</span>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
