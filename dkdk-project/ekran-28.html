@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="bg">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>28. Финална викторина · Как компютрите се научиха да играят</title>
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+<script src="assets/site.js" defer></script>
+</head>
+<body class="ch4" data-screen="28">
+<main class="screen" style="max-width: 56rem">
+  <header class="screen-head">
+    <p class="tag">Глава IV · Отвъд игрите</p>
+    <h1>Финална викторина</h1>
+    <p class="lead">Осем въпроса, по един наведнъж. Накрая ще видиш резултата и кои отговори са верни и кои грешни.</p>
+  </header>
+
+  <div data-quiz>
+    <section class="q">
+      <span class="box-label">Въпрос 1</span>
+      <p class="q-text">Каква е разликата между правила и стратегия?</p>
+      <ol class="q-opts">
+        <li data-ok><button type="button">Правилата казват кое е позволено, а стратегията — кое е добро.</button><p class="q-why">Да. Правилата са входният билет, стратегията избира добрите ходове.</p></li>
+        <li><button type="button">Няма разлика: който знае правилата, знае и как да играе.</button><p class="q-why">Не. Който знае само правилата, знае какво може, но не и какво е добре.</p></li>
+        <li><button type="button">Стратегията е просто по-дълъг списък с правила.</button><p class="q-why">Не. Стратегията избира кой от позволените ходове е добър.</p></li>
+      </ol>
+    </section>
+
+    <section class="q">
+      <span class="box-label">Въпрос 2</span>
+      <p class="q-text">Защо Deep Blue е бил толкова силен?</p>
+      <ol class="q-opts">
+        <li><button type="button">Научил се е сам чрез милиони партии срещу себе си.</button><p class="q-why">Не. Deep Blue не се учи от собствените си партии — това прави по-късно AlphaZero.</p></li>
+        <li data-ok><button type="button">Бързо търсене плюс оценка на позициите, разработена с помощта на гросмайстори.</button><p class="q-why">Да. Около 200 милиона позиции в секунда плюс човешко знание, вложено в оценката.</p></li>
+        <li><button type="button">Знаел е всички възможни шахматни партии.</button><p class="q-why">Не. Партиите в шаха са толкова много, че никой компютър не може да ги провери.</p></li>
+      </ol>
+    </section>
+
+    <section class="q" data-fixed>
+      <span class="box-label">Въпрос 3</span>
+      <p class="q-text">X е на ход. Кой от означените ходове избира минимакс?</p>
+      <img class="fig" src="media/fig/quiz_board.svg" alt="Дъска: X горе вляво и долу вдясно, O горе в средата и в центъра. Буквата А е долу вляво, Б — долу в средата, В — горе вдясно." width="180" height="190" style="--fig-h: 8.5em; margin-bottom: .5rem">
+      <ol class="q-opts">
+        <li><button type="button">Долу вляво: създава две заплахи наведнъж.</button><p class="q-why">Красиво, но O завършва средната колона и печели веднага.</p></li>
+        <li data-ok><button type="button">Долу в средата: спира O.</button><p class="q-why">Да. Минимакс оценява всеки ход по най-силния отговор. Само този ход спира O, а оттам при перфектна игра е равенство.</p></li>
+        <li><button type="button">Горе вдясно: заплашва дясната колона.</button><p class="q-why">Заплахата идва късно: O завършва средната колона и печели.</p></li>
+      </ol>
+    </section>
+
+    <section class="q">
+      <span class="box-label">Въпрос 4</span>
+      <p class="q-text">Ученик обучава модел да разпознава породи кучета. Проверява го със същите снимки, с които го е обучил, и получава 100%. Какво показва това?</p>
+      <ol class="q-opts">
+        <li data-ok><button type="button">Още нищо сигурно: моделът може просто да помни тези снимки. Трябват нови снимки за проверка.</button><p class="q-why">Да. Тренировъчните примери учат, тестовите проверяват.</p></li>
+        <li><button type="button">Моделът е отличен: 100% е най-добрият възможен резултат.</button><p class="q-why">Не непременно. Отличен резултат върху вече видени снимки може да значи само, че моделът ги помни.</p></li>
+        <li><button type="button">Моделът със сигурност е повреден: 100% винаги значи грешка.</button><p class="q-why">Не. Резултатът може да е верен — просто не доказва, че моделът се справя с нови снимки.</p></li>
+      </ol>
+    </section>
+
+    <section class="q">
+      <span class="box-label">Въпрос 5</span>
+      <p class="q-text">Чатбот получава награда всеки път, когато потребителят натисне „харесва ми“. Какво рискува да научи?</p>
+      <ol class="q-opts">
+        <li><button type="button">Да отговаря винаги вярно: верните отговори винаги се харесват най-много.</button><p class="q-why">Не винаги. Хората понякога харесват приятното повече от вярното.</p></li>
+        <li><button type="button">Нищо лошо: наградата от хора винаги сочи точно целта.</button><p class="q-why">Не. Машината гони наградата, не целта ни — а и хората могат да наградят грешното нещо.</p></li>
+        <li data-ok><button type="button">Да казва на хората това, което искат да чуят — дори когато не е вярно.</button><p class="q-why">Да. Харесването не е същото като истината, затова модел, награждаван само за харесвания, може да се научи да ласкае.</p></li>
+      </ol>
+    </section>
+
+    <section class="q">
+      <span class="box-label">Въпрос 6</span>
+      <p class="q-text">Какво прави MCTS?</p>
+      <ol class="q-opts">
+        <li data-ok><button type="button">Разпределя ограничен брой проверки: повече към обещаващите ходове, но и към малко проверените.</button><p class="q-why">Да. MCTS балансира между използване на наученото и проучване на непознатото.</p></li>
+        <li><button type="button">Проверява всички възможни ходове до края на играта.</button><p class="q-why">Не. В Го това е невъзможно — затова MCTS избира къде да провери.</p></li>
+        <li><button type="button">Проверява само най-обещаващия ход.</button><p class="q-why">Не. Така може да изпусне по-добър ход, за който още знае малко.</p></li>
+      </ol>
+    </section>
+
+    <section class="q">
+      <span class="box-label">Въпрос 7</span>
+      <p class="q-text">Как AlphaZero се учи без човешки партии?</p>
+      <ol class="q-opts">
+        <li><button type="button">Знае правилата, затова винаги играе перфектно.</button><p class="q-why">Не. Правилата дават само старта, не стратегията.</p></li>
+        <li data-ok><button type="button">Играе срещу себе си, проверява ходовете с търсене и се учи от резултатите.</button><p class="q-why">Да. Стратегията идва от опита: игра срещу себе си, търсене и обучение.</p></li>
+        <li><button type="button">Копира партиите на шампиони.</button><p class="q-why">Не. AlphaZero не вижда нито една човешка партия.</p></li>
+      </ol>
+    </section>
+
+    <section class="q">
+      <span class="box-label">Въпрос 8</span>
+      <p class="q-text">ChatGPT ти дава уверен отговор с дата. Какво правиш?</p>
+      <ol class="q-opts">
+        <li><button type="button">Приемам го: моделът е обучен върху огромно количество текст.</button><p class="q-why">Не. Моделът предсказва вероятен текст, а не проверен факт.</p></li>
+        <li><button type="button">Питам ChatGPT дали е сигурен; щом каже „да“, значи е вярно.</button><p class="q-why">Не. Увереността на модела не е доказателство.</p></li>
+        <li data-ok><button type="button">Проверявам го в надеждни източници: моделът предсказва вероятен текст и може да греши убедително.</button><p class="q-why">Да. Фактите се проверяват в надеждни източници.</p></li>
+      </ol>
+    </section>
+  </div>
+</main>
+</body>
+</html>

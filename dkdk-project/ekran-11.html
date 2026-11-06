@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="bg">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>11. Atari: учене от точки · Как компютрите се научиха да играят</title>
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+<script src="assets/site.js" defer></script>
+</head>
+<body class="ch2" data-screen="11">
+<main class="screen">
+  <header class="screen-head">
+    <p class="tag">Глава II · Да се учиш от грешките</p>
+    <h1>Atari: учене от точки</h1>
+    <p class="lead">Програма, която вижда само екрана и резултата.</p>
+  </header>
+  <div class="split">
+    <div class="story">
+      <p>Представи си, че виждаш само екрана на игра и резултата. Никой не ти казва правилата. Можеш ли сам да се научиш да играеш?</p>
+      <p>През 2013–2015 г. DeepMind създава <b>DQN</b> — програма, която получава само пикселите от екрана на стари игри за Atari и точките. Не знае какво е топче или ракета. Опитва действия, вижда как се променя резултатът и постепенно открива кои действия носят точки. В статията от 2015 г. DQN се научава да играе 49 различни игри с един и същ метод, обучаван отделно за всяка игра. В повече от половината стига близо до резултата на професионален тестер на игри или го надминава.</p>
+      <p>В Breakout (топче, платформа и стена от тухлички) DQN в началото почти не улучва топчето. След часове игра го улучва почти всеки път. А после открива нещо, което никой не ѝ е казал: ако пробие тунел отстрани, топчето минава зад стената и само руши тухличките.</p>
+      <p class="remember">При обучението с подсилване агентът вижда ситуацията, действа, получава награда и постепенно променя поведението си така, че наградите да стават повече.</p>
+    </div>
+    <div class="act">
+      <figure>
+        <img class="fig" src="media/fig/breakout.svg" alt="Пикселна схема на Breakout: стена от цветни тухлички с пробит тунел вляво; топчето е минало зад стената" width="320" height="280" style="--fig-h: 10em">
+        <figcaption>Тунелът в Breakout: топчето минава зад стената.</figcaption>
+      </figure>
+      <section class="box watch">
+        <span class="box-label">Гледай</span>
+        <div class="yt" data-yt="TmPfTpjtdgg" data-title="„DQN Breakout“, Google DeepMind"></div>
+        <p><b>Въпрос за наблюдение:</b> сравни началото и края. Какво се промени в стратегията?</p>
+        <details class="reveal">
+          <summary>Виж отговора</summary>
+          <p>В началото агентът често изпуска топчето. Накрая пробива тунел отстрани и оставя топчето да руши стената отгоре.</p>
+        </details>
+      </section>
+    </div>
+  </div>
+</main>
+</body>
+</html>

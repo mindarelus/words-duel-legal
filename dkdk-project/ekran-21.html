@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="bg">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>21. Интуиция и проверка: Policy и Value · Как компютрите се научиха да играят</title>
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+<script src="assets/site.js" defer></script>
+<script src="assets/ttt.js" defer></script>
+<script src="assets/s21.js" defer></script>
+</head>
+<body class="ch3" data-screen="21">
+<main class="screen">
+  <header class="screen-head">
+    <p class="tag">Глава III · Да играеш срещу себе си</p>
+    <h1>Интуиция и проверка: Policy и Value</h1>
+    <p class="lead">Разузнавачите стават много по-умни, ако някой им подскаже накъде да тръгнат.</p>
+  </header>
+  <div class="split">
+    <div class="story">
+      <p>Разузнавачите от екран 20 доиграват със случайна политика (<i>default policy</i>): работи, но бавно и шумно. AlphaGo добавя невронни мрежи за два въпроса:</p>
+      <ul>
+        <li><b>Policy (политика): „Кои ходове изглеждат най-обещаващи?“</b> Мрежата казва колко предпочита всеки ход, а търсенето проверява по-често предпочитаните. Това не са шансове за победа.</li>
+        <li><b>Value (оценка): „Колко добре изглежда тази позиция?“</b> Едно число от −1 (загуба) до +1 (победа).</li>
+      </ul>
+      <p>Мрежите дават бърза „интуиция“. Търсенето е бавната проверка, която може да я поправи. В AlphaGo това са две отделни мрежи; в AlphaGo Zero и AlphaZero — една мрежа с два изхода.</p>
+      <p class="small">Учебна схема: числата на Policy са примерни, посещенията са от истинска симулация със 100 проби.</p>
+      <p class="remember">Policy: „Кои ходове са обещаващи?“ Value: „Добре ли изглежда позицията?“ Търсенето: „Нека проверя.“</p>
+      <section class="more">
+        <p class="more-title">За любопитните</p>
+        <p>AlphaGo все още доиграва партии с бърза и проста политика и смесва резултата наполовина с оценката на Value. AlphaGo Zero спира доиграванията и разчита само на мрежата. За нея дъската е купчина числа: 17 „слоя“ по 19 × 19 — къде са камъните на всеки играч в последните осем хода и кой е на ход.</p>
+      </section>
+    </div>
+    <div class="act">
+      <section class="widget" id="intuition">
+        <div class="btns" role="group" aria-label="Какво да покаже дъската" style="margin-top: 0">
+          <button type="button" class="btn ghost" data-mode="policy" aria-pressed="false">Покажи Policy</button>
+          <button type="button" class="btn ghost" data-mode="value" aria-pressed="false">Покажи Value</button>
+          <button type="button" class="btn ghost" data-mode="search" aria-pressed="false">Пусни търсенето</button>
+        </div>
+        <div class="board-row tight" style="--board: 9em">
+          <div class="board-box"></div>
+          <div class="thermo" hidden>
+            <div class="tube"><span class="mark"></span></div>
+            <div class="scale"><span>+1 победа</span><b>≈ 0</b><span>−1 загуба</span></div>
+          </div>
+          <p class="feedback" data-text aria-live="polite" style="margin: 0; flex: 1 1 10em"></p>
+        </div>
+      </section>
+      <section class="q">
+        <span class="box-label">Предположи</span>
+        <p class="q-text">Policy дава 50% на ход A. Какво означава това?</p>
+        <ol class="q-opts">
+          <li><button type="button">Ход A печели с шанс 50%.</button><p class="q-why">Не. Това не е шанс за победа.</p></li>
+          <li data-ok><button type="button">Мрежата предпочита ход A пред другите и търсенето ще го проверява по-често.</button><p class="q-why">Да. Policy казва кои ходове изглеждат обещаващи. Колко добра е позицията казва Value.</p></li>
+          <li><button type="button">Ход A ще бъде изигран в половината партии.</button><p class="q-why">Не непременно. Търсенето може да промени избора.</p></li>
+        </ol>
+      </section>
+    </div>
+  </div>
+</main>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="bg">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>22. AlphaZero: само правилата и игра срещу себе си · Как компютрите се научиха да играят</title>
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+<script src="assets/site.js" defer></script>
+<script src="assets/s22.js" defer></script>
+</head>
+<body class="ch3" data-screen="22">
+<main class="screen">
+  <header class="screen-head">
+    <p class="tag">Глава III · Да играеш срещу себе си</p>
+    <h1>AlphaZero: само правилата и игра срещу себе си</h1>
+    <p class="lead">Декември 2017 г. Без нито една човешка партия.</p>
+  </header>
+  <div class="split">
+    <div class="story">
+      <section class="q">
+        <span class="box-label">Предположи</span>
+        <p class="q-text">Може ли компютър, който знае само правилата, без нито една човешка партия, сам да стане по-силен от най-добрите програми?</p>
+        <ol class="q-opts">
+          <li><button type="button">Не. Без човешки примери няма от какво да се учи.</button><p class="q-why">Изненадващо, може: учи се от собствените си партии.</p></li>
+          <li><button type="button">Да, но ще му трябват векове игра.</button><p class="q-why">Трябват му много партии, но не векове: цялото обучение трае около 9 часа за шах, 12 часа за шоги и 13 дни за Го.</p></li>
+          <li data-ok><button type="button">Да — като играе срещу себе си и се учи от резултатите.</button><p class="q-why">Точно така е обучен AlphaZero.</p></li>
+        </ol>
+      </section>
+      <p><b>AlphaZero</b> на DeepMind започва със случайни ходове и знае само правилата. После играе срещу себе си — милиони партии. За шах, Го и шоги се обучава отделен модел, но по един и същ метод. Накрая побеждава най-силните програми и в трите игри. Гари Каспаров пише, че AlphaZero играе динамично и открито — като самия него. Малко по-рано AlphaGo Zero прави същото само за Го и бие версията, победила Лий Седол, със 100:0.</p>
+      <p class="remember">Правилата дават старта. Играта срещу себе си, търсенето и обучението изграждат стратегията.</p>
+    </div>
+    <div class="act">
+      <section class="widget" id="loops">
+        <h2>Двата кръга стъпка по стъпка</h2>
+        <div class="loops">
+          <div class="loop">
+            <h3>Малкият кръг: при всеки ход</h3>
+            <ol><li data-step="0">Мрежата предлага</li><li data-step="1">Търсенето проверява</li><li data-step="2">Избира ход</li></ol>
+          </div>
+          <div class="loop">
+            <h3>Големият кръг: след много партии</h3>
+            <ol><li data-step="3">Партии срещу себе си</li><li data-step="4">Учебни картички</li><li data-step="5">Обучение на мрежата</li><li data-step="6">По-добра мрежа</li></ol>
+          </div>
+        </div>
+        <div class="stage" aria-live="polite"></div>
+        <figure data-pic hidden>
+          <img class="fig" src="media/fig/az_step1.svg" alt="" width="400" height="190" style="--fig-h: 7.5em">
+        </figure>
+        <div class="btns"><button type="button" class="btn" data-next>Следваща стъпка</button></div>
+      </section>
+    </div>
+  </div>
+</main>
+</body>
+</html>

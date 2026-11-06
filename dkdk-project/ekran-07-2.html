@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="bg">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>7. Персептронът: научи неврона · Как компютрите се научиха да играят</title>
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+<script src="assets/site.js" defer></script>
+<script src="assets/s07.js" defer></script>
+</head>
+<body class="ch2" data-screen="7" data-part="2">
+<main class="screen">
+  <header class="screen-head">
+    <p class="tag">Глава II · Да се учиш от грешките</p>
+    <h1>Научи неврона</h1>
+    <p class="lead">Никой не пише правилото — то се получава от примерите.</p>
+  </header>
+  <div class="split act-wide">
+    <div class="story">
+      <p>А как се учи персептронът? В началото никой не знае правилните тегла. Той започва с някакви тегла и гледа примерите един по един. Когато отговорът му е грешен, теглата се поправят малко в правилната посока. Когато е верен, нищо не се променя.</p>
+      <p>Всяка точка вдясно е пример: стойност на съкровището (хоризонтално) и опасност (вертикално). <b>Зелените кръгчета</b> трябва да са „вземи“, <b>червените квадратчета</b> — „не вземай“. Нагласи теглата така, че невронът да познае всички примери. Или го остави да се учи сам.</p>
+      <div class="box know">
+        <span class="box-label">Знаеш ли?</span>
+        <p>На 8 юли 1958 г. „Ню Йорк Таймс“ пише, че флотът на САЩ очаква машината един ден да върви, говори, вижда, пише и дори да осъзнава съществуването си. А един персептрон може да раздели примерите само с права линия. Гръмките обещания за изкуствения интелект си струва да се проверяват.</p>
+      </div>
+      <p class="remember">Ученето е поправяне на числа след грешка. Никой не пише правило за всеки случай.</p>
+    </div>
+    <div class="act">
+      <section class="widget" id="neuron-lab">
+        <svg class="plot" viewBox="0 0 560 330" role="img" aria-label="Графика с шестте примера и границата на решението" style="--plot-h: 14em"></svg>
+        <p class="feedback" data-status aria-live="polite"></p>
+        <div class="sliders">
+          <label>w₁ <input type="range" min="-20" max="20" step="1" data-w="0"><output></output></label>
+          <label>w₂ <input type="range" min="-20" max="20" step="1" data-w="1"><output></output></label>
+          <label>b <input type="range" min="-20" max="20" step="1" data-w="2"><output></output></label>
+        </div>
+        <p class="calc" data-calc aria-live="polite"></p>
+        <div class="btns">
+          <button type="button" class="btn" data-step>Една стъпка учене</button>
+          <button type="button" class="btn ghost" data-reset>Отначало</button>
+        </div>
+        <p class="small" data-log aria-live="polite">Кликни точка, за да видиш сметката за нея.</p>
+      </section>
+    </div>
+  </div>
+</main>
+</body>
+</html>

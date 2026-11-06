@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="bg">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>4. Колко са партиите? · Как компютрите се научиха да играят</title>
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+<script src="assets/site.js" defer></script>
+</head>
+<body class="ch1" data-screen="4">
+<main class="screen">
+  <header class="screen-head">
+    <p class="tag">Глава I · Да мислиш напред</p>
+    <h1>Колко са партиите?</h1>
+    <p class="lead">И как машината решава коя позиция е добра.</p>
+  </header>
+  <div class="split">
+    <div class="story">
+      <p>В морския шах има 255&nbsp;168 възможни партии, а различните позиции — ако не броим завъртените и огледалните — са само 765. Компютърът ги проверява за миг. Затова морският шах е „решена“ игра: при перфектна игра и от двете страни винаги е равенство.</p>
+      <section class="box try with-pic">
+        <svg class="board" style="width: 5.5em" viewBox="0 0 300 300" role="img" aria-label="Дъска за морски шах. Горе: X, O, O. В средата: O, X, X. Долу: X, празно поле, O."><rect x="2" y="2" width="296" height="296" rx="22" fill="#fff" stroke="#c8d0dc" stroke-width="3"/><g><rect class="cell" x="8" y="8" width="84" height="84" rx="14" fill="#fff"/><path d="M26 26L74 74M74 26L26 74" stroke="#2e5eaa" stroke-width="10" stroke-linecap="round" fill="none"/></g><g><rect class="cell" x="108" y="8" width="84" height="84" rx="14" fill="#fff"/><circle cx="150" cy="50" r="26" fill="none" stroke="#c2453b" stroke-width="10"/></g><g><rect class="cell" x="208" y="8" width="84" height="84" rx="14" fill="#fff"/><circle cx="250" cy="50" r="26" fill="none" stroke="#c2453b" stroke-width="10"/></g><g><rect class="cell" x="8" y="108" width="84" height="84" rx="14" fill="#fff"/><circle cx="50" cy="150" r="26" fill="none" stroke="#c2453b" stroke-width="10"/></g><g><rect class="cell" x="108" y="108" width="84" height="84" rx="14" fill="#fff"/><path d="M126 126L174 174M174 126L126 174" stroke="#2e5eaa" stroke-width="10" stroke-linecap="round" fill="none"/></g><g><rect class="cell" x="208" y="108" width="84" height="84" rx="14" fill="#fff"/><path d="M226 126L274 174M274 126L226 174" stroke="#2e5eaa" stroke-width="10" stroke-linecap="round" fill="none"/></g><g><rect class="cell" x="8" y="208" width="84" height="84" rx="14" fill="#fff"/><path d="M26 226L74 274M74 226L26 274" stroke="#2e5eaa" stroke-width="10" stroke-linecap="round" fill="none"/></g><g><rect class="cell" x="108" y="208" width="84" height="84" rx="14" fill="#fff"/></g><g><rect class="cell" x="208" y="208" width="84" height="84" rx="14" fill="#fff"/><circle cx="250" cy="250" r="26" fill="none" stroke="#c2453b" stroke-width="10"/></g><path d="M100 14V286M14 100H286" stroke="#9aa6b8" stroke-width="4" stroke-linecap="round"/><path d="M200 14V286M14 200H286" stroke="#9aa6b8" stroke-width="4" stroke-linecap="round"/></svg>
+        <div>
+          <span class="box-label">Опитай</span>
+          <p><b>X е на ход. Каква е оценката на позицията?</b> Оценката е число: +1 — печели X, 0 — равенство, −1 — печели O.</p>
+          <details class="reveal">
+            <summary>Виж отговора</summary>
+            <p><b>0 — равенство.</b> X ще сложи последния знак долу в средата, но всеки ред, колона и диагонал вече има и X, и O. Никой не може да подреди три.</p>
+          </details>
+        </div>
+      </section>
+      <div class="box people">
+        <span class="box-label">Хората</span>
+        <p>Deep Blue използва стотици специални шахматни чипове, които работят едновременно. Започва като студентски проект: през 1985 г. докторантът Фън-сюн Сю и колегите му от университета Карнеги Мелън построяват шахматна машина на име ChipTest. По-късно IBM ги наема и проектът прераства в Deep Blue.</p>
+        <p>А Каспаров не се отказва от компютрите. През 1998 г. играе първия мач по „напреднал шах“ с българина Топалов: човек и компютър в един отбор (3:3).</p>
+      </div>
+    </div>
+    <div class="act">
+      <p>В шаха е друго. През 1950 г. американският математик Клод Шанън описва как компютър може да играе шах и изчислява, че възможните партии са около 10¹²⁰ — число със 121 цифри. Никой компютър не може да ги провери всичките. Затова в шаха трябва да <b>избираш</b> къде да търсиш.</p>
+      <section class="widget">
+        <h2>Оценката е претеглен сбор</h2>
+        <p>Най-простата оценка на шахматна позиция брои фигурите:</p>
+        <table class="values">
+          <tr><th><span aria-hidden="true">♟&#xFE0E;</span>пешка</th><th><span aria-hidden="true">♞</span>кон</th><th><span aria-hidden="true">♝</span>офицер</th><th><span aria-hidden="true">♜</span>топ</th><th><span aria-hidden="true">♛</span>царица</th></tr>
+          <tr><td>1</td><td>3</td><td>3</td><td>5</td><td>9</td></tr>
+        </table>
+        <p>Ако имаш царица и пешка срещу топ, оценката е (9 + 1) − 5 = <b>+5</b> в твоя полза.</p>
+        <p>Истинските програми добавят още признаци (например колко е защитен царят и колко свободни са фигурите) и ги умножават по <b>тегла</b> — колко е важен всеки от тях:</p>
+        <p class="formula weighted">оценка = тегло₁&nbsp;×&nbsp;признак₁ + тегло₂&nbsp;×&nbsp;признак₂ + …</p>
+        <p>Запомни тази форма — „претеглен сбор“. На екран 7 ще я срещнем отново. Там обаче теглата няма да ги пише човек: машината ще ги научи сама.</p>
+      </section>
+    </div>
+  </div>
+</main>
+</body>
+</html>

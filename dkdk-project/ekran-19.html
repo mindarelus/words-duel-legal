@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="bg">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>19. MCTS: много малки разузнавачи · Как компютрите се научиха да играят</title>
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+<script src="assets/site.js" defer></script>
+<script src="assets/ttt.js" defer></script>
+<script src="assets/s19.js" defer></script>
+</head>
+<body class="ch3" data-screen="19">
+<main class="screen">
+  <header class="screen-head">
+    <p class="tag">Глава III · Да играеш срещу себе си</p>
+    <h1>MCTS: много малки разузнавачи</h1>
+    <p class="lead">Имаш време за 100 проверки, а пред теб има 1000 възможности.</p>
+  </header>
+  <div class="split story-wide">
+    <div class="story">
+      <p>В Го не можеш да провериш всичко, както в морския шах. AlphaGo използва търсене в дърво „Монте Карло“ (<b>MCTS</b>). Представи си малки разузнавачи. Всеки тръгва от текущата позиция, избира път, доиграва партията до края — дори със случайни ходове — и носи резултата обратно. Всеки възел в дървото пази две числа: колко разузнавачи са минали оттам и колко добре са се справили. Следващият разузнавач използва тези бележки: по-често тръгва към ходове, които досега изглеждат добре, но от време на време проверява и ходове, за които знаем малко.</p>
+      <section class="q">
+        <span class="box-label">Предположи</span>
+        <p class="q-text">Защо разузнавачите понякога проверяват и ходове, които досега изглеждат слаби?</p>
+        <ol class="q-opts">
+          <li><button type="button">За да губят време и да изглеждат случайни.</button><p class="q-why">Не. Ако никога не проверим слабоизглеждащ ход, може да изпуснем най-добрия.</p></li>
+          <li data-ok><button type="button">Защото една-две проби не стигат, за да сме сигурни, че ходът е слаб.</button><p class="q-why">Точно. MCTS балансира между това да използва наученото и да проучва непознатото.</p></li>
+          <li><button type="button">Защото проверяват всички ходове по равно.</button><p class="q-why">Не по равно: обещаващите ходове получават повече проверки.</p></li>
+        </ol>
+      </section>
+      <p class="remember">MCTS не проверява всичко. То решава къде си струва да провери още.</p>
+    </div>
+    <div class="act">
+      <section class="widget" id="scouts">
+        <p class="small">Нашата дъска от екран 5. Числото в клетката показва колко разузнавачи са минали през този ход. Кадрите са от една истинска симулация със случайни доигравания, пресметната предварително.</p>
+        <div class="board-box" style="--board: 9em"></div>
+        <p class="counter" aria-live="polite"></p>
+        <p class="feedback" data-text aria-live="polite"></p>
+        <div class="btns"><button type="button" class="btn" data-next>Следваща проба</button></div>
+        <ol class="steps4 small">
+          <li><b>Избор:</b> тръгваш по клоните, които досега изглеждат добре, но понякога и по малко проверен клон.</li>
+          <li><b>Разширяване:</b> когато стигнеш непознато място, добавяш нов клон.</li>
+          <li><b>Оценка:</b> доиграваш партията до края или питаш невронна мрежа.</li>
+          <li><b>Връщане:</b> пренасяш резултата назад по пътя и обновяваш бележките.</li>
+        </ol>
+      </section>
+    </div>
+  </div>
+</main>
+</body>
+</html>

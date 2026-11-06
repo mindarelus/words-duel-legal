@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="bg">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>23. AlphaStar: скрита информация и лига от противници · Как компютрите се научиха да играят</title>
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+<script src="assets/site.js" defer></script>
+<script src="assets/s23.js" defer></script>
+</head>
+<body class="ch3" data-screen="23">
+<main class="screen">
+  <header class="screen-head">
+    <p class="tag">Глава III · Да играеш срещу себе си</p>
+    <h1>AlphaStar: скрита информация и лига от противници</h1>
+    <p class="lead">Игра в реално време, в която не виждаш противника.</p>
+  </header>
+  <div class="split">
+    <div class="story">
+      <div class="box with-pic" style="--pic-w: 8em; background: none; padding: 0">
+        <img src="media/fig/fog.svg" alt="Карта, разделена на две: вляво базата и единиците ти, вдясно мъгла с въпросителни" width="360" height="230">
+        <p>StarCraft II е стратегическа игра в реално време: събираш ресурси, строиш база и управляваш армия, всичко едновременно. И не виждаш цялата карта: противникът може да подготвя изненада там, където не гледаш.</p>
+      </div>
+      <p>През януари 2019 г. DeepMind показва, че AlphaStar е победил професионалистите TLO и MaNa с 5:0 и 5:0 (мачовете са изиграни през декември 2018 г.). В демонстрационна партия на живо MaNa побеждава нова версия на AlphaStar. През октомври 2019 г. AlphaStar достига ниво Grandmaster — над 99,8% от класираните играчи. Учи се първо от човешки игри, после в „лига“ от агенти, които се състезават помежду си.</p>
+      <p>Защо лига, а не просто игра срещу себе си? Пробвай вдясно.</p>
+      <p class="remember">Колкото по-сложен е светът, толкова по-важни са скритата информация, приспособяването и разнообразните противници.</p>
+      <section class="more">
+        <p class="more-title">За любопитните</p>
+        <p>Скрита информация има и в картите. През 2021 г. системата DouZero се научава да играе китайската игра на карти DouDizhu чрез игра срещу себе си. Представи си белот: знаеш своите карти и изиграните, но не и кой какво държи.</p>
+        <p>Компютърът може да натиска бутони много по-бързо от човек. Затова в окончателната версия AlphaStar гледа играта през „камера“ като човек, а броят на действията му в минута е ограничен до нива, сравними с професионалистите.</p>
+      </section>
+    </div>
+    <div class="act">
+      <section class="widget" id="rps">
+        <h2>Камък, ножица, хартия</h2>
+        <p class="q-text" data-ask aria-live="polite"></p>
+        <div class="rps-choices">
+          <button type="button" class="btn ghost" data-move="камък">Камък</button>
+          <button type="button" class="btn ghost" data-move="ножица">Ножица</button>
+          <button type="button" class="btn ghost" data-move="хартия">Хартия</button>
+        </div>
+        <p class="feedback" data-text aria-live="polite"></p>
+        <div data-reveal hidden>
+          <p><b>Върнахте се в началото. Станахте ли по-силни срещу всички — или само се гоните в кръг?</b></p>
+          <p>Ако агентът тренира само срещу последната си версия, може да се научи да бие нея и да забрави как да бие старите. Затова AlphaStar тренира срещу цяла лига: стари версии и специални „ловци на слабости“, чиято задача е да откриват пробойни в главните агенти.</p>
+          <div class="btns"><button type="button" class="btn ghost" data-again>Изиграй отново</button></div>
+        </div>
+      </section>
+      <section class="box watch">
+        <span class="box-label">Гледай</span>
+        <div class="yt" data-yt="cUTMhmVh1qs" data-title="„DeepMind StarCraft II Demonstration“, Google DeepMind"></div>
+        <p><b>Въпрос за наблюдение:</b> какво не вижда играчът в даден момент?</p>
+      </section>
+    </div>
+  </div>
+</main>
+</body>
+</html>

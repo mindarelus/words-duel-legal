@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="bg">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>7. Персептронът: машина, която се поправя · Как компютрите се научиха да играят</title>
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+<script src="assets/site.js" defer></script>
+</head>
+<body class="ch2" data-screen="7">
+<main class="screen">
+  <header class="screen-head">
+    <p class="tag">Глава II · Да се учиш от грешките</p>
+    <h1>Персептронът: машина, която се поправя</h1>
+    <p class="lead">1958 г. Машина от фотоклетки и кабели, която се учи от грешките си.</p>
+  </header>
+  <div class="split">
+    <div class="story">
+      <p>През 1958 г. психологът Франк Розенблат показва <b>персептрона</b> — модел, вдъхновен от нервните клетки в мозъка. По-късно построява и истинска машина, Mark I: „око“ от 20 × 20 фотоклетки, свързани с кабели. Показват ѝ картинки и тя се научава да ги различава.</p>
+      <h2>Как решава един неврон</h2>
+      <p>Всеки вход е число. Всеки вход има <b>тегло</b> — колко е важен. Невронът умножава входовете по теглата, събира ги, добавя <b>отместване</b> и проверява: ако сборът е поне нула, отговорът е „да“, иначе „не“.</p>
+      <p>Герой в игра решава дали да вземе съкровище. x₁ е стойността на съкровището, x₂ е опасността. При w₁ = 1, w₂ = −2 и b = 0 съкровище за 8 точки при опасност 2 дава 8 − 4 + 0 = 4 ≥ 0, значи героят го взема.</p>
+      <p class="formula">z = w₁·x₁ + w₂·x₂ + b; ако z ≥ 0 — „вземи“, иначе — „не вземай“</p>
+      <p class="small">На следващата страница ще научиш неврона сам.</p>
+    </div>
+    <div class="act">
+      <figure>
+        <img src="media/P4_mark_i_perceptron.jpg" alt="Машината Mark I Perceptron с камера, насочена към буквата C" width="1000" height="783" style="max-height: 12em; width: auto">
+        <figcaption>Mark I „гледа“ буквата C. Снимка от 1960 г.</figcaption>
+      </figure>
+      <figure>
+        <img class="fig" src="media/fig/neuron.svg" alt="Схема на неврон: входовете стойност и опасност с тегла 1 и −2, отместване 0, сбор и проверка дали z е поне нула" width="640" height="200" style="--fig-h: 8em">
+        <figcaption>Един изкуствен неврон решава дали герой в игра да вземе съкровище.</figcaption>
+      </figure>
+    </div>
+  </div>
+</main>
+</body>
+</html>

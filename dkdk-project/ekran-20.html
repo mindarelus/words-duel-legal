@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="bg">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>20. Случайни партии — и това работи? · Как компютрите се научиха да играят</title>
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+<script src="assets/site.js" defer></script>
+<script src="assets/ttt.js" defer></script>
+<script src="assets/s20.js" defer></script>
+</head>
+<body class="ch3" data-screen="20">
+<main class="screen">
+  <header class="screen-head">
+    <p class="tag">Глава III · Да играеш срещу себе си</p>
+    <h1>Случайни партии — и това работи?</h1>
+    <p class="lead">За любопитните: най-изненадващата част на MCTS.</p>
+  </header>
+  <div class="split">
+    <div class="story">
+      <p>Как разузнавачът разбира дали един ход е добър, ако няма оценка на позицията? Най-простият начин звучи несериозно: доиграва партията със <b>съвсем случайни ходове</b>. Една такава партия не казва почти нищо. Но ако след даден ход случайните партии печелят по-често, ходът вероятно е добър. Изненадващо, това работи — не винаги, но горе-долу.</p>
+      <p>Случайният противник обаче пропуска и печеливши ходове, затова лош ход понякога изглежда добър. Затова MCTS строи дърво и проверява по-често обещаващото. През 2006 г. програмата Crazy Stone на Реми Кулом, построена върху тази идея, печели златен медал на компютърната олимпиада по Го на дъска 9&nbsp;×&nbsp;9.</p>
+      <div class="box think">
+        <span class="box-label">Задълбочи · Формулата на любопитството</span>
+        <p>Как разузнавачът избира накъде да тръгне? Най-известното правило, наречено UCT (2006 г.), събира две части:</p>
+        <p class="formula">стойност на хода = средна печалба + c · √(ln N / n)</p>
+        <p>Първата част е опитът: колко добре е минал ходът досега. Втората е любопитството: N е броят проби през родителския възел, n — през този ход. Колкото по-рядко е проверяван ходът, толкова по-голям е бонусът. Същият избор като с пицарията на екран 12: да използваш наученото или да опиташ нещо ново.</p>
+      </div>
+    </div>
+    <div class="act">
+      <section class="widget" id="playouts">
+        <div class="board-box" style="--board: 9em"></div>
+        <p class="counter" aria-live="polite"></p>
+        <p class="feedback" data-text aria-live="polite"></p>
+        <div class="btns"><button type="button" class="btn" data-more>+10 случайни партии от всеки ход</button><button type="button" class="btn ghost" data-reset hidden>Отначало</button></div>
+        <p class="small">Нашата дъска от екран 5, X е на ход. Числото в клетката показва в колко от случайните партии след този ход печели X.</p>
+      </section>
+      <p><b>Минимакс или MCTS?</b> Минимакс има нужда от добра оценка на позициите — в шаха има такава. MCTS може и без нея, защото оценката идва от пробите. И двата метода са търсене, не обучение: AlphaZero използва MCTS и за шах.</p>
+      <p class="small">А името? Методите със случайни опити се наричат „Монте Карло“ — по прочутото казино — още от 40-те години на XX век.</p>
+    </div>
+  </div>
+</main>
+</body>
+</html>

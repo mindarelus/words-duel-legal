@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="bg">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>12. DQN отблизо · Как компютрите се научиха да играят</title>
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+<script src="assets/site.js" defer></script>
+</head>
+<body class="ch2" data-screen="12">
+<main class="screen">
+  <header class="screen-head">
+    <p class="tag">Глава II · Да се учиш от грешките</p>
+    <h1>DQN отблизо</h1>
+    <p class="lead">За любопитните: какво има в името, колко дълго учи DQN и къде се проваля.</p>
+  </header>
+  <div class="split">
+    <div class="story">
+      <p><b>DQN</b> означава Deep Q-Network. <b>Deep</b> — „дълбока“: пикселите от екрана минават през три слоя филтри, като при AlexNet. <b>Q</b> идва от английското <i>quality</i> — качество: за всяко действие мрежата учи едно число — колко точки очаква да събере оттук нататък, ако го направи. После избира действието с най-голямо число. Гледа не един кадър, а последните четири: от един не можеш да разбереш накъде лети топчето, от четири — можеш.</p>
+      <p>За всяка игра DQN играе около 38 дни без почивка. Човекът-тестер, с когото я сравняват, тренира по около 2 часа.</p>
+      <section class="q" data-poll>
+        <span class="box-label">Опитай · Любимото или новото?</span>
+        <p class="q-text">В началото DQN натиска бутоните напосоки. После все по-често избира най-доброто, което знае. А ти? До любимата ти пицария отваря нова. Къде отиваш?</p>
+        <ol class="q-opts">
+          <li><button type="button">Винаги в любимата: знам, че е вкусно.</button><p class="q-why">Сигурен избор. Но може никога да не разбереш, че новата е по-добра. Агент, който само повтаря наученото, спира да открива.</p></li>
+          <li><button type="button">Винаги в новата: може да е по-добра.</button><p class="q-why">Ще откриеш много, но често ще ядеш лоша пица. Агент, който само опитва, не използва наученото.</p></li>
+          <li><button type="button">Обикновено в любимата, понякога в новата.</button><p class="q-why">Така прави и DQN: с времето само 1 ход от 10 остава случаен, а другите 9 са най-доброто, което знае. Всеки агент търси мярката между новото и наученото.</p></li>
+        </ol>
+      </section>
+    </div>
+    <div class="act">
+      <div class="photos" style="--photo-h: 8em">
+        <figure><img src="media/P9g_2014_hassabis_wired.jpg" alt="Демис Хасабис на сцена, а на екрана играта Space Invaders" width="1000" height="500"><figcaption>Демис Хасабис (вляво), съосновател на DeepMind. Лондон, 2014&nbsp;г. На екрана — Space Invaders за Atari.</figcaption></figure>
+      </div>
+      <section class="q">
+        <span class="box-label">Предположи</span>
+        <p class="q-text">В коя от тези игри DQN събира най-малко точки?</p>
+        <ol class="q-opts">
+          <li><button type="button">Breakout: топче, платформа и стена от тухлички.</button><p class="q-why">Не. Тук DQN е далеч по-добра от човека: около 400 точки срещу 32.</p></li>
+          <li><button type="button">Space Invaders: стреляш по извънземни, които слизат към теб.</button><p class="q-why">Не. Тук DQN играе на нивото на човека-тестер.</p></li>
+          <li data-ok><button type="button">Montezuma's Revenge: първата награда идва чак при ключа — след стълби и череп.</button><p class="q-why">Да. DQN събира 0 точки: с опити напосоки почти никога не стига до ключа и няма от какво да се учи. Чак през 2020 г. Agent57 на DeepMind побеждава човека и в нея, и в още 56 игри за Atari — като получава допълнителна награда за всичко ново, което види.</p></li>
+        </ol>
+      </section>
+    </div>
+  </div>
+</main>
+</body>
+</html>

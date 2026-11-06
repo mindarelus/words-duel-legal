@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="bg">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>5. Как компютърът мисли напред · Как компютрите се научиха да играят</title>
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+<script src="assets/site.js" defer></script>
+<script src="assets/ttt.js" defer></script>
+<script src="assets/s05.js" defer></script>
+</head>
+<body class="ch1" data-screen="5">
+<main class="screen">
+  <header class="screen-head">
+    <p class="tag">Глава I · Да мислиш напред</p>
+    <h1>Как компютърът мисли напред</h1>
+    <p class="lead">Красивият ход и неприятният отговор.</p>
+  </header>
+  <div class="split act-wide">
+    <div class="story">
+      <p>Как Deep Blue избира ход? Идеята е по-стара от самите компютри.</p>
+      <p>Представи си дърво: от позицията излизат всички твои възможни ходове, от всеки от тях — всички отговори на противника, и така нататък. <b>Минимакс</b> разсъждава така: аз избирам най-доброто за мен, но противникът избира най-доброто за себе си, тоест най-лошото за мен. Затова оценявам всеки свой ход по най-силния отговор, който може да последва.</p>
+      <p>В морския шах дървото е малко и компютърът проверява всичко. В шаха то е огромно, затова Deep Blue гледа само няколко хода напред и оценява позициите, до които стига.</p>
+      <p class="remember">Силният ход не е най-красивият. Силният ход издържа и на най-добрия отговор.</p>
+      <section class="more">
+        <p class="more-title">За любопитните</p>
+        <p>През 1928 г. математикът Джон фон Нойман доказва теоремата за минимакс за игри с двама противници. През 1950 г. Клод Шанън описва как шахматна програма може да търси по този принцип в дървото на ходовете. В шаха търсенето спира няколко хода напред и позициите се оценяват с числа.</p>
+      </section>
+    </div>
+    <div class="act">
+      <section class="widget" id="task">
+        <h2>Твой ход: X е на ход. Кликни клетката, която избираш.</h2>
+        <div class="board-box" style="--board: 10em"></div>
+        <p class="feedback" aria-live="polite"></p>
+        <div class="btns"><button type="button" class="btn ghost" data-again hidden>Опитай друг ход</button><span class="small">Това е „нашата дъска“. Ще я срещнеш и на екрани 19–22.</span></div>
+      </section>
+      <figure id="tree" hidden>
+        <img class="fig" src="media/fig/minimax_tree.svg" alt="Дървото на нашата дъска: петте хода на X, най-силният отговор на O след всеки и резултатът. Четири хода губят, само ходът в средата вдясно води до равенство." width="640" height="296" style="--fig-h: 11em">
+        <figcaption>Цялото дърво: за всеки ход на X — най-силният отговор на O (червено) и резултатът при перфектна игра. Пресметнато с програма.</figcaption>
+      </figure>
+    </div>
+  </div>
+</main>
+</body>
+</html>

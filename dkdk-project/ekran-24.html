@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="bg">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>24. Как ChatGPT пише отговор · Как компютрите се научиха да играят</title>
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+<script src="assets/site.js" defer></script>
+<script src="assets/s24.js" defer></script>
+</head>
+<body class="ch4" data-screen="24">
+<main class="screen">
+  <header class="screen-head">
+    <p class="tag">Глава IV · Отвъд игрите</p>
+    <h1>Как ChatGPT пише отговор</h1>
+    <p class="lead">Едно парче текст след друго — милиарди пъти.</p>
+  </header>
+  <div class="split story-wide">
+    <div class="story">
+      <p>Когато ChatGPT ти отговаря, той не пише цялото изречение наведнъж. Текстът е разделен на <b>токени</b> — парчета, които могат да са цяла дума, част от дума или препинателен знак. Моделът гледа текста досега и пресмята кой токен е вероятно да следва. Избира един, добавя го и повтаря. В избора често има малко случайност, затова един и същ въпрос може да получи различни отговори.</p>
+      <p>ChatGPT е изграден върху <b>Transformer</b> (това е T в GPT) — архитектура от 2017 г. В нея всяко парче е вектор, списък от числа. <b>Вниманието</b> решава към кои парчета да гледа и смесва векторите им. От сместа идват вероятностите за следващото парче.</p>
+      <p>Как се е научил? Чете огромно количество текст и се упражнява да познае следващото парче. После хора оценяват отговорите му в разговор и моделът се донастройва — това е наградата от глава II.</p>
+      <section class="box think">
+        <span class="box-label">Помисли</span>
+        <p><b>Кой е написал верните отговори, от които езиковият модел се учи?</b></p>
+        <details class="reveal">
+          <summary>Виж отговора</summary>
+          <p>Самият текст: следващото парче вече е там. Това се нарича самоконтролирано обучение (self-supervised). Не го бъркай с игра срещу себе си (self-play) от AlphaZero: имената си приличат, но идеите са различни.</p>
+        </details>
+      </section>
+      <p class="remember">Езиковият модел пише последователно, токен по токен, чрез прогнози.</p>
+    </div>
+    <div class="act">
+      <section class="widget" id="next-token">
+        <h2>Довърши изречението</h2>
+        <p class="sentence" aria-live="polite"></p>
+        <div class="choices"></div>
+        <div class="btns">
+          <button type="button" class="btn ghost" data-model>Нека моделът избере</button>
+          <button type="button" class="btn ghost" data-again>Отначало</button>
+        </div>
+        <div class="vec-box">
+          <p class="vec-title">Векторът на контекста <span class="small">· 5 от хилядите му числа</span></p>
+          <div class="vec" data-vec></div>
+          <p class="vec-why" data-why aria-live="polite"></p>
+        </div>
+        <p class="small">Учебна схема: истинските числа са хиляди и без имена. Процентите са сметнати: умножаваме числата на варианта по тези на контекста и събираме — по-голяма сума, по-голям процент.</p>
+      </section>
+    </div>
+  </div>
+</main>
+</body>
+</html>

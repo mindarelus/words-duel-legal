@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="bg">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>25. Думите като числа · Как компютрите се научиха да играят</title>
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+<script src="assets/site.js" defer></script>
+<script src="assets/s25.js" defer></script>
+</head>
+<body class="ch4" data-screen="25">
+<main class="screen">
+  <header class="screen-head">
+    <p class="tag">Глава IV · Отвъд игрите</p>
+    <h1>Думите като числа</h1>
+    <p class="lead">Карта, на която „котка“ стои до „куче“, а „крал“ — до „кралица“.</p>
+  </header>
+  <div class="split">
+    <div class="story">
+      <p>Помниш ли персептрона? Входовете му бяха числа. Позицията в игра също може да се запише като списък от числа, по едно за всяка клетка.</p>
+      <p>А думите? И тях моделите превръщат в списъци от числа, наречени <b>вектори</b>. Представи си карта, на която думи с подобна употреба стоят близо: „котка“ до „куче“, „влак“ до „автобус“. Истинската карта има стотици измерения. Не можем да я нарисуваме, но компютърът смята с нея спокойно.</p>
+      <p>В модели като Word2Vec (2013 г.) се появява любопитно свойство: <b>крал − мъж + жена ≈ кралица</b>. Разликата между „мъж“ и „жена“ е близка до разликата между „крал“ и „кралица“. Това е приблизително свойство на някои модели за думи, а не закон за всички думи и не правило за ChatGPT.</p>
+      <p class="remember">Векторите не са „значения в кутия“, а числа, научени от това как се използват думите.</p>
+      <section class="more">
+        <p class="more-title">За любопитните</p>
+        <p>Защо „много измерения“? Списък от 3 числа е точка в стая. Списък от 300 числа е точка в пространство, което не можем да си представим, но можем да смятаме с него.</p>
+        <p>Има и тъмна страна: векторите научават и предразсъдъците от текстовете. Машината не е предубедена сама по себе си — тя повтаря данните, от които се е учила.</p>
+      </section>
+    </div>
+    <div class="act">
+      <section class="widget" id="word-map">
+        <h2>Карта на думите</h2>
+        <div class="map-box" style="--map-h: 17em"></div>
+        <div class="btns"><button type="button" class="btn" data-calc aria-pressed="false">крал − мъж + жена</button></div>
+        <p class="feedback" data-text aria-live="polite"></p>
+        <p class="small">Учебна двумерна схема, а не истинските вектори на модел.</p>
+      </section>
+    </div>
+  </div>
+</main>
+</body>
+</html>
