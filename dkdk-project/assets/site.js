@@ -118,7 +118,7 @@
   }
 
   function renderHeader(index) {
-    var nav = '<a href="index.html">Карта</a>';
+    var nav = '<a class="map-link" href="index.html">' + LOGO + "Карта</a>";
     if (index >= 0) {
       nav += arrow(PAGES[index - 1], "←", "Назад") + '<span class="count">' + PAGES[index].n + " / " +
         SCREENS.length + "</span>" + arrow(PAGES[index + 1], "→", "Напред");
@@ -126,9 +126,7 @@
     var header = document.createElement("header");
     header.className = "topbar";
     header.innerHTML =
-      '<div class="topbar-inner"><span class="brand">' + LOGO +
-      "<span>Как компютрите се научиха да играят</span></span>" +
-      '<nav class="topnav" aria-label="Навигация">' + nav + "</nav></div>";
+      '<div class="topbar-inner"><nav class="topnav" aria-label="Навигация">' + nav + "</nav></div>";
     document.body.insertBefore(header, document.body.firstChild);
   }
 

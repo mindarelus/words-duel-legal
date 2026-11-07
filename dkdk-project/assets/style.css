@@ -37,16 +37,17 @@ h1, h2, h3 { line-height: 1.2; }
 .hero :focus-visible, .yt-card :focus-visible { outline-color: #fff; }  /* dark surfaces */
 [hidden] { display: none !important; }
 
-/* top bar: brand, map, previous and next screen */
+/* top bar: one button with the logo back to the map, the screen count, and on a phone the arrows */
 .topbar { position: sticky; top: 0; z-index: 10; background: #fff; border-bottom: 1px solid var(--line); }
 .topbar-inner { display: flex; align-items: center; gap: .8rem; max-width: var(--page); margin: 0 auto; padding: .28rem 1.6rem; }
-.brand { display: flex; align-items: center; gap: .55rem; color: var(--ink); text-decoration: none; font-weight: 700; font-size: .85rem; }
-.brand svg { width: 1.7rem; height: 1.7rem; flex: none; }
 .topnav { display: flex; align-items: center; gap: .35rem; }
 .topnav a { padding: .2rem .65rem; border-radius: 8px; background: var(--panel); color: var(--ink); font-size: .85rem; font-weight: 700; text-decoration: none; }
 .topnav a:hover { background: var(--cs); }
 .topnav .arrow { padding: .2rem .55rem; }
 .topnav .arrow.off { opacity: .3; pointer-events: none; }
+.topnav .map-link { display: flex; align-items: center; gap: .45rem; }
+.map-link svg { width: 1.3rem; height: 1.3rem; flex: none; }
+@media (min-width: 901px) { .topnav .arrow { display: none; } }  /* on a desktop the pager below is always in view */
 .topnav .count { min-width: 3.4rem; text-align: center; font-size: .8rem; color: var(--muted); font-variant-numeric: tabular-nums; }
 
 /* a screen: heading over two columns */
@@ -376,7 +377,6 @@ details.more.locked > summary { color: var(--muted); cursor: default; }
 }
 @media (max-width: 520px) {
   .topbar-inner { gap: .5rem; padding: .35rem .8rem; }
-  .brand span { display: none; }
   .faces { grid-template-columns: repeat(2, 1fr); }
   .box.with-pic { grid-template-columns: 1fr; }
   .mini-faces { float: none; margin: 0 0 .5rem; }
