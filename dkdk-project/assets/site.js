@@ -126,8 +126,8 @@
     var header = document.createElement("header");
     header.className = "topbar";
     header.innerHTML =
-      '<div class="topbar-inner"><a class="brand" href="index.html">' + LOGO +
-      "<span>Как компютрите се научиха да играят</span></a>" +
+      '<div class="topbar-inner"><span class="brand">' + LOGO +
+      "<span>Как компютрите се научиха да играят</span></span>" +
       '<nav class="topnav" aria-label="Навигация">' + nav + "</nav></div>";
     document.body.insertBefore(header, document.body.firstChild);
   }

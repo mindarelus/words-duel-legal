@@ -16,7 +16,7 @@
   --cs: #e7eef9;  /* chapter tint */
   --radius: 12px;
   --font: "Segoe UI", system-ui, -apple-system, Roboto, "Helvetica Neue", Arial, sans-serif;
-  --page: min(80rem, 1240px);  /* width of the page column, header included */
+  --page: 80rem;  /* width of the page column, header included; grows with the root size */
 }
 .ch1 { --c: #2e5eaa; --ct: #2a559b; --cs: #e7eef9; }
 .ch2 { --c: #1f8a64; --ct: #176e4f; --cs: #e3f3ec; }
@@ -24,7 +24,9 @@
 .ch4 { --c: #c4622a; --ct: #a24d1c; --cs: #fbede3; }
 
 * { box-sizing: border-box; }
-html { font-size: clamp(13px, 2vh, 16.5px); -webkit-text-size-adjust: 100%; }
+/* The root size follows the height, so a screen fits whatever the window. Above 16.5px it grows only
+   while the width keeps up (1.2vw keeps the 80rem column inside the window), and never past 20px. */
+html { font-size: clamp(13px, 2vh, max(16.5px, min(2vh, 1.2vw, 20px))); -webkit-text-size-adjust: 100%; }
 body { margin: 0; font-family: var(--font); line-height: 1.5; color: var(--ink); background: #fff; }
 img, svg { max-width: 100%; }
 img { height: auto; }
